@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpublisher.a  CMakeFiles/publisher.dir/library/publisher.cpp.o
+/usr/bin/ranlib libpublisher.a

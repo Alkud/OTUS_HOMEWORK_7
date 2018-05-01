@@ -1,0 +1,1 @@
+/usr/bin/g++    -rdynamic CMakeFiles/bulk.dir/bulk.cpp.o  -o bulk libcommand_processor.a libinput_processor.a libinput_reader.a liblogger.a libpublisher.a 

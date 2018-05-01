@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_notification_broadcaster.html" title="NotificationBroadcaster" alt="" coords="6,64,165,91"/>
+<area shape="rect" id="node2" href="$class_smart_buffer.html" title="SmartBuffer\&lt; T \&gt;" alt="" coords="239,5,363,32"/>
+<area shape="rect" id="node3" href="$class_smart_buffer.html" title="SmartBuffer\&lt; std::pair\l\&lt; size_t, std::string \&gt; \&gt;" alt="" coords="222,57,381,98"/>
+<area shape="rect" id="node4" href="$class_smart_buffer.html" title="SmartBuffer\&lt; std::string \&gt;" alt="" coords="214,123,389,149"/>
+</map>

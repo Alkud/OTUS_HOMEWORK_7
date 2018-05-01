@@ -1,0 +1,5 @@
+<map id="InputReader" name="InputReader">
+<area shape="rect" id="node2" href="$class_message_broadcaster.html" title="MessageBroadcaster" alt="" coords="5,83,149,109"/>
+<area shape="rect" id="node3" href="$class_smart_buffer.html" title="SmartBuffer\&lt; std::string \&gt;" alt="" coords="174,83,348,109"/>
+<area shape="rect" id="node4" href="$class_notification_broadcaster.html" title="NotificationBroadcaster" alt="" coords="182,5,340,32"/>
+</map>

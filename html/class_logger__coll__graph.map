@@ -1,0 +1,5 @@
+<map id="Logger" name="Logger">
+<area shape="rect" id="node2" href="$class_notification_listener.html" title="NotificationListener" alt="" coords="5,91,139,117"/>
+<area shape="rect" id="node3" href="$class_smart_buffer.html" title="SmartBuffer\&lt; std::pair\l\&lt; size_t, std::string \&gt; \&gt;" alt="" coords="163,83,321,125"/>
+<area shape="rect" id="node4" href="$class_notification_broadcaster.html" title="NotificationBroadcaster" alt="" coords="163,5,321,32"/>
+</map>
