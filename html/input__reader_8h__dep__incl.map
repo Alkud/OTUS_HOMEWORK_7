@@ -1,7 +1,7 @@
 <map id="library/input_reader.h" name="library/input_reader.h">
-<area shape="rect" id="node2" href="$command__processor_8h.html" title="library/command_processor.h" alt="" coords="73,80,265,107"/>
-<area shape="rect" id="node6" href="$input__reader_8cpp.html" title="library/input_reader.cpp" alt="" coords="291,80,448,107"/>
-<area shape="rect" id="node3" href="$bulk_8cpp.html" title="bulk.cpp" alt="" coords="5,155,75,181"/>
-<area shape="rect" id="node4" href="$otus__hw__7__test_8cpp.html" title="otus_hw_7_test.cpp" alt="" coords="100,155,239,181"/>
-<area shape="rect" id="node5" href="$command__processor_8cpp.html" title="library/command_processor.cpp" alt="" coords="263,155,469,181"/>
+<area shape="rect" id="node2" href="$command__processor_8h.html" title="library/command_processor.h" alt="" coords="175,80,368,107"/>
+<area shape="rect" id="node6" href="$input__reader_8cpp.html" title="library/input_reader.cpp" alt="" coords="393,80,551,107"/>
+<area shape="rect" id="node3" href="$otus__hw__7__test_8cpp.html" title="otus_hw_7_test.cpp" alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node4" href="$command__processor_8cpp.html" title="library/command_processor.cpp" alt="" coords="169,155,375,181"/>
+<area shape="rect" id="node5" href="$homework__7_8cpp.html" title="library/homework_7.cpp" alt="" coords="400,155,559,181"/>
 </map>

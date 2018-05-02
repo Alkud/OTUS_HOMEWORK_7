@@ -19,6 +19,7 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 
 #Set library target
+add_library(homework_7 ./library/homework_7.cpp)
 add_library(command_processor ./library/command_processor.cpp)
 add_library(input_processor ./library/input_processor.cpp)
 add_library(input_reader ./library/input_reader.cpp)
@@ -62,7 +63,8 @@ set_target_properties(otus_hw_7_test PROPERTIES
 )
 
 #Link
-target_link_libraries(bulk command_processor)
+target_link_libraries(bulk homework_7)
+target_link_libraries(homework_7 command_processor)
 target_link_libraries(command_processor
                       input_processor input_reader logger publisher)
 target_link_libraries(input_reader
@@ -82,6 +84,7 @@ target_link_libraries(smart_buffer INTERFACE
 
 target_link_libraries(otus_hw_7_test
                       ${Boost_LIBRARIES}
+                      homework_7
                       command_processor)
 
 install(TARGETS bulk RUNTIME DESTINATION bin)

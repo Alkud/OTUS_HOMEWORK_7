@@ -26,6 +26,11 @@ public:
   /// Runs input reader
   void run() const ;
 
+  SmartBuffer<std::string>* getCommandBuffer()
+  { return inputBuffer.get(); }
+  SmartBuffer<std::pair<size_t, std::string>>* getBulkBuffer()
+  { return outputBuffer.get(); }
+
 private:
   std::unique_ptr<InputReader> inputReader;
   std::unique_ptr<SmartBuffer<std::string>> inputBuffer;

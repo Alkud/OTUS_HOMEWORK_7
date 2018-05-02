@@ -120,11 +120,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/otus_hw_7_test.dir/DependInfo.cmake"
   "CMakeFiles/input_reader.dir/DependInfo.cmake"
   "CMakeFiles/input_processor.dir/DependInfo.cmake"
+  "CMakeFiles/homework_7.dir/DependInfo.cmake"
   "CMakeFiles/logger.dir/DependInfo.cmake"
   "CMakeFiles/command_processor.dir/DependInfo.cmake"
   "CMakeFiles/bulk.dir/DependInfo.cmake"
   "CMakeFiles/publisher.dir/DependInfo.cmake"
-  "CMakeFiles/otus_hw_7_test.dir/DependInfo.cmake"
   )

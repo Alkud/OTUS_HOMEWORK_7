@@ -90,6 +90,7 @@ bulk_EXTERNAL_OBJECTS =
 
 bulk: CMakeFiles/bulk.dir/bulk.cpp.o
 bulk: CMakeFiles/bulk.dir/build.make
+bulk: libhomework_7.a
 bulk: libcommand_processor.a
 bulk: libinput_processor.a
 bulk: libinput_reader.a

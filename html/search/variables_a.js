@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value',['value',['../struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258',1,'SmartBuffer::Record']]]
+  ['tempbuffer',['tempBuffer',['../class_input_processor.html#a2658dc0872c430bf0f19d4e91a037154',1,'InputProcessor']]]
 ];

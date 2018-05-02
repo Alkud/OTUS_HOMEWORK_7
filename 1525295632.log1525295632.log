@@ -1,0 +1,4 @@
+bulk: cmd4
+bulk: cmd2, cmd3
+bulk: cmd4, cmd5, cmd6, cmd7, cmd8, cmd9
+bulk: cmd4, cmd5

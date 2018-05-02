@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/travis/build/Alkud/OTUS_HOMEWORK_7
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -134,6 +122,18 @@ package/fast: package
 
 .PHONY : package/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/cmake-3.9.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
@@ -190,6 +190,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named otus_hw_7_test
+
+# Build rule for target.
+otus_hw_7_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 otus_hw_7_test
+.PHONY : otus_hw_7_test
+
+# fast build rule for target.
+otus_hw_7_test/fast:
+	$(MAKE) -f CMakeFiles/otus_hw_7_test.dir/build.make CMakeFiles/otus_hw_7_test.dir/build
+.PHONY : otus_hw_7_test/fast
+
+#=============================================================================
 # Target rules for targets named input_reader
 
 # Build rule for target.
@@ -214,6 +227,19 @@ input_processor: cmake_check_build_system
 input_processor/fast:
 	$(MAKE) -f CMakeFiles/input_processor.dir/build.make CMakeFiles/input_processor.dir/build
 .PHONY : input_processor/fast
+
+#=============================================================================
+# Target rules for targets named homework_7
+
+# Build rule for target.
+homework_7: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 homework_7
+.PHONY : homework_7
+
+# fast build rule for target.
+homework_7/fast:
+	$(MAKE) -f CMakeFiles/homework_7.dir/build.make CMakeFiles/homework_7.dir/build
+.PHONY : homework_7/fast
 
 #=============================================================================
 # Target rules for targets named logger
@@ -266,19 +292,6 @@ publisher: cmake_check_build_system
 publisher/fast:
 	$(MAKE) -f CMakeFiles/publisher.dir/build.make CMakeFiles/publisher.dir/build
 .PHONY : publisher/fast
-
-#=============================================================================
-# Target rules for targets named otus_hw_7_test
-
-# Build rule for target.
-otus_hw_7_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 otus_hw_7_test
-.PHONY : otus_hw_7_test
-
-# fast build rule for target.
-otus_hw_7_test/fast:
-	$(MAKE) -f CMakeFiles/otus_hw_7_test.dir/build.make CMakeFiles/otus_hw_7_test.dir/build
-.PHONY : otus_hw_7_test/fast
 
 bulk.o: bulk.cpp.o
 
@@ -333,6 +346,33 @@ library/command_processor.s: library/command_processor.cpp.s
 library/command_processor.cpp.s:
 	$(MAKE) -f CMakeFiles/command_processor.dir/build.make CMakeFiles/command_processor.dir/library/command_processor.cpp.s
 .PHONY : library/command_processor.cpp.s
+
+library/homework_7.o: library/homework_7.cpp.o
+
+.PHONY : library/homework_7.o
+
+# target to build an object file
+library/homework_7.cpp.o:
+	$(MAKE) -f CMakeFiles/homework_7.dir/build.make CMakeFiles/homework_7.dir/library/homework_7.cpp.o
+.PHONY : library/homework_7.cpp.o
+
+library/homework_7.i: library/homework_7.cpp.i
+
+.PHONY : library/homework_7.i
+
+# target to preprocess a source file
+library/homework_7.cpp.i:
+	$(MAKE) -f CMakeFiles/homework_7.dir/build.make CMakeFiles/homework_7.dir/library/homework_7.cpp.i
+.PHONY : library/homework_7.cpp.i
+
+library/homework_7.s: library/homework_7.cpp.s
+
+.PHONY : library/homework_7.s
+
+# target to generate assembly for a file
+library/homework_7.cpp.s:
+	$(MAKE) -f CMakeFiles/homework_7.dir/build.make CMakeFiles/homework_7.dir/library/homework_7.cpp.s
+.PHONY : library/homework_7.cpp.s
 
 library/input_processor.o: library/input_processor.cpp.o
 
@@ -475,28 +515,32 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... package"
+	@echo "... otus_hw_7_test"
 	@echo "... input_reader"
 	@echo "... input_processor"
+	@echo "... install/local"
+	@echo "... homework_7"
 	@echo "... package_source"
 	@echo "... logger"
 	@echo "... install"
 	@echo "... command_processor"
 	@echo "... bulk"
 	@echo "... publisher"
-	@echo "... otus_hw_7_test"
 	@echo "... bulk.o"
 	@echo "... bulk.i"
 	@echo "... bulk.s"
 	@echo "... library/command_processor.o"
 	@echo "... library/command_processor.i"
 	@echo "... library/command_processor.s"
+	@echo "... library/homework_7.o"
+	@echo "... library/homework_7.i"
+	@echo "... library/homework_7.s"
 	@echo "... library/input_processor.o"
 	@echo "... library/input_processor.i"
 	@echo "... library/input_processor.s"

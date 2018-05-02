@@ -226,6 +226,9 @@ bulk_SOURCE_DIR:STATIC=/home/travis/build/Alkud/OTUS_HOMEWORK_7
 //Dependencies for the target
 command_processor_LIB_DEPENDS:STATIC=general;input_processor;general;input_reader;general;logger;general;publisher;
 
+//Dependencies for the target
+homework_7_LIB_DEPENDS:STATIC=general;command_processor;
+
 //Dependencies for target
 input_processor_LIB_DEPENDS:STATIC=
 

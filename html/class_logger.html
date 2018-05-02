@@ -86,7 +86,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="class_logger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Logger Class Reference</div>  </div>
@@ -111,8 +110,8 @@ Collaboration diagram for Logger:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acbaba16c0eedb0bb7202dae52bac52da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#acbaba16c0eedb0bb7202dae52bac52da">Logger</a> (<a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt; *newBuffer)</td></tr>
-<tr class="separator:acbaba16c0eedb0bb7202dae52bac52da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d845904ca827b002b224ada9b61ca3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a55d845904ca827b002b224ada9b61ca3">Logger</a> (<a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt; *newBuffer, const std::string &amp;newDestinationDirectory=&quot;&quot;, std::ostream &amp;newErrorOut=std::cerr)</td></tr>
+<tr class="separator:a55d845904ca827b002b224ada9b61ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67280d87d3053df64d07d93616d9e2cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a67280d87d3053df64d07d93616d9e2cf">reactNotification</a> (<a class="el" href="class_notification_broadcaster.html">NotificationBroadcaster</a> *sender) override</td></tr>
 <tr class="memdesc:a67280d87d3053df64d07d93616d9e2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes object's reaction to a notification.  <a href="#a67280d87d3053df64d07d93616d9e2cf">More...</a><br/></td></tr>
 <tr class="separator:a67280d87d3053df64d07d93616d9e2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,14 +124,13 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a240750749cbd840393f497f91dd536e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, <br class="typebreak"/>
 std::string &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#a240750749cbd840393f497f91dd536e8">buffer</a></td></tr>
 <tr class="separator:a240750749cbd840393f497f91dd536e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:ae1f261b8d03cc430005074f340e61ab8"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#ae1f261b8d03cc430005074f340e61ab8">BulkProcessorCreator</a></td></tr>
-<tr class="separator:ae1f261b8d03cc430005074f340e61ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8625c2f5457f5a40cee210a8d02c559"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#af8625c2f5457f5a40cee210a8d02c559">destinationDirectory</a></td></tr>
+<tr class="separator:af8625c2f5457f5a40cee210a8d02c559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace438dd1a93c64800bdfc440f5eb156d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logger.html#ace438dd1a93c64800bdfc440f5eb156d">errorOut</a></td></tr>
+<tr class="separator:ace438dd1a93c64800bdfc440f5eb156d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="acbaba16c0eedb0bb7202dae52bac52da"></a>
+<a class="anchor" id="a55d845904ca827b002b224ada9b61ca3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -140,8 +138,24 @@ Friends</h2></td></tr>
           <td class="memname">Logger::Logger </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt; *&#160;</td>
-          <td class="paramname"><em>newBuffer</em></td><td>)</td>
+          <td class="paramname"><em>newBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>newDestinationDirectory</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>newErrorOut</em> = <code>std::cerr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -177,27 +191,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="ae1f261b8d03cc430005074f340e61ab8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class BulkProcessorCreator</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a240750749cbd840393f497f91dd536e8"></a>
 <div class="memitem">
@@ -208,6 +201,46 @@ Friends</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::pair&lt;size_t, std::string&gt; &gt;* Logger::buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af8625c2f5457f5a40cee210a8d02c559"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Logger::destinationDirectory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ace438dd1a93c64800bdfc440f5eb156d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; Logger::errorOut</td>
         </tr>
       </table>
   </td>

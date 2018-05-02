@@ -96,30 +96,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="listeners_8h.html">listeners.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="smart__buffer_8h.html">smart_buffer.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_logger.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_logger.html">Logger</a> : <span class="keyword">public</span> <a class="code" href="class_notification_listener.html">NotificationListener</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="class_logger.html#acbaba16c0eedb0bb7202dae52bac52da">Logger</a>(<a class="code" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::pair&lt;size_t, std::string&gt;&gt;* newBuffer);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a67280d87d3053df64d07d93616d9e2cf">reactNotification</a>(<a class="code" href="class_notification_broadcaster.html">NotificationBroadcaster</a>* sender) <span class="keyword">override</span> ;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_logger.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_logger.html">Logger</a> : <span class="keyword">public</span> <a class="code" href="class_notification_listener.html">NotificationListener</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="class_logger.html#a55d845904ca827b002b224ada9b61ca3">Logger</a>(<a class="code" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::pair&lt;size_t, std::string&gt;&gt;* newBuffer,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;         <span class="keyword">const</span> std::string&amp; newDestinationDirectory = <span class="stringliteral">&quot;&quot;</span>, std::ostream&amp; newErrorOut = std::cerr);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_logger.html#a67280d87d3053df64d07d93616d9e2cf">reactNotification</a>(<a class="code" href="class_notification_broadcaster.html">NotificationBroadcaster</a>* sender) <span class="keyword">override</span> ;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_logger.html#ae1f261b8d03cc430005074f340e61ab8">   18</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_logger.html#ae1f261b8d03cc430005074f340e61ab8">BulkProcessorCreator</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_logger.html#a240750749cbd840393f497f91dd536e8">   20</a></span>&#160;  <a class="code" href="class_smart_buffer.html">SmartBuffer&lt;std::pair&lt;size_t, std::string&gt;</a>&gt;* <a class="code" href="class_logger.html#a240750749cbd840393f497f91dd536e8">buffer</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_logger.html#af8625c2f5457f5a40cee210a8d02c559">   21</a></span>&#160;  std::string <a class="code" href="class_logger.html#af8625c2f5457f5a40cee210a8d02c559">destinationDirectory</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_logger.html#ace438dd1a93c64800bdfc440f5eb156d">   22</a></span>&#160;  std::ostream&amp; <a class="code" href="class_logger.html#ace438dd1a93c64800bdfc440f5eb156d">errorOut</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="ttc" id="listeners_8h_html"><div class="ttname"><a href="listeners_8h.html">listeners.h</a></div></div>
 <div class="ttc" id="class_smart_buffer_html"><div class="ttname"><a href="class_smart_buffer.html">SmartBuffer</a></div><div class="ttdef"><b>Definition:</b> smart_buffer.h:11</div></div>
-<div class="ttc" id="class_logger_html"><div class="ttname"><a href="class_logger.html">Logger</a></div><div class="ttdef"><b>Definition:</b> logger.h:9</div></div>
+<div class="ttc" id="class_logger_html"><div class="ttname"><a href="class_logger.html">Logger</a></div><div class="ttdef"><b>Definition:</b> logger.h:10</div></div>
+<div class="ttc" id="class_logger_html_ace438dd1a93c64800bdfc440f5eb156d"><div class="ttname"><a href="class_logger.html#ace438dd1a93c64800bdfc440f5eb156d">Logger::errorOut</a></div><div class="ttdeci">std::ostream &amp; errorOut</div><div class="ttdef"><b>Definition:</b> logger.h:22</div></div>
 <div class="ttc" id="class_notification_listener_html"><div class="ttname"><a href="class_notification_listener.html">NotificationListener</a></div><div class="ttdef"><b>Definition:</b> listeners.h:17</div></div>
+<div class="ttc" id="class_logger_html_af8625c2f5457f5a40cee210a8d02c559"><div class="ttname"><a href="class_logger.html#af8625c2f5457f5a40cee210a8d02c559">Logger::destinationDirectory</a></div><div class="ttdeci">std::string destinationDirectory</div><div class="ttdef"><b>Definition:</b> logger.h:21</div></div>
 <div class="ttc" id="class_notification_broadcaster_html"><div class="ttname"><a href="class_notification_broadcaster.html">NotificationBroadcaster</a></div><div class="ttdef"><b>Definition:</b> broadcasters.h:61</div></div>
-<div class="ttc" id="class_logger_html_ae1f261b8d03cc430005074f340e61ab8"><div class="ttname"><a href="class_logger.html#ae1f261b8d03cc430005074f340e61ab8">Logger::BulkProcessorCreator</a></div><div class="ttdeci">friend class BulkProcessorCreator</div><div class="ttdef"><b>Definition:</b> logger.h:18</div></div>
+<div class="ttc" id="class_logger_html_a55d845904ca827b002b224ada9b61ca3"><div class="ttname"><a href="class_logger.html#a55d845904ca827b002b224ada9b61ca3">Logger::Logger</a></div><div class="ttdeci">Logger(SmartBuffer&lt; std::pair&lt; size_t, std::string &gt;&gt; *newBuffer, const std::string &amp;newDestinationDirectory=&quot;&quot;, std::ostream &amp;newErrorOut=std::cerr)</div><div class="ttdef"><b>Definition:</b> logger.cpp:6</div></div>
 <div class="ttc" id="class_logger_html_a67280d87d3053df64d07d93616d9e2cf"><div class="ttname"><a href="class_logger.html#a67280d87d3053df64d07d93616d9e2cf">Logger::reactNotification</a></div><div class="ttdeci">void reactNotification(NotificationBroadcaster *sender) override</div><div class="ttdoc">Describes object&#39;s reaction to a notification. </div><div class="ttdef"><b>Definition:</b> logger.cpp:16</div></div>
 <div class="ttc" id="smart__buffer_8h_html"><div class="ttname"><a href="smart__buffer_8h.html">smart_buffer.h</a></div></div>
-<div class="ttc" id="class_logger_html_acbaba16c0eedb0bb7202dae52bac52da"><div class="ttname"><a href="class_logger.html#acbaba16c0eedb0bb7202dae52bac52da">Logger::Logger</a></div><div class="ttdeci">Logger(SmartBuffer&lt; std::pair&lt; size_t, std::string &gt;&gt; *newBuffer)</div><div class="ttdef"><b>Definition:</b> logger.cpp:7</div></div>
 <div class="ttc" id="class_logger_html_a240750749cbd840393f497f91dd536e8"><div class="ttname"><a href="class_logger.html#a240750749cbd840393f497f91dd536e8">Logger::buffer</a></div><div class="ttdeci">SmartBuffer&lt; std::pair&lt; size_t, std::string &gt; &gt; * buffer</div><div class="ttdef"><b>Definition:</b> logger.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

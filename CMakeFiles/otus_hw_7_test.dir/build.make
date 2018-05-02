@@ -91,6 +91,7 @@ otus_hw_7_test_EXTERNAL_OBJECTS =
 otus_hw_7_test: CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o
 otus_hw_7_test: CMakeFiles/otus_hw_7_test.dir/build.make
 otus_hw_7_test: /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
+otus_hw_7_test: libhomework_7.a
 otus_hw_7_test: libcommand_processor.a
 otus_hw_7_test: libinput_processor.a
 otus_hw_7_test: libinput_reader.a

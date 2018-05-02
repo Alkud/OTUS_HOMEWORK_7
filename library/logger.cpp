@@ -2,10 +2,10 @@
 
 #include "logger.h"
 #include <fstream>
-#include <iostream>
 
-Logger::Logger(SmartBuffer<std::pair<size_t, std::string>>* newBuffer) :
-  buffer{newBuffer}
+Logger::Logger(SmartBuffer<std::pair<size_t, std::string>>* newBuffer,
+               const std::string& newDestinationDirectory, std::ostream& newErrorOut) :
+  buffer{newBuffer}, destinationDirectory{newDestinationDirectory}, errorOut{newErrorOut}
 {
   if (nullptr == buffer)
   {
@@ -20,13 +20,13 @@ void Logger::reactNotification(NotificationBroadcaster* sender)
     auto nextBulkInfo{buffer->get(this)};
     std::string logFileName
     {
-      std::to_string(nextBulkInfo.first).append(".log")
+      destinationDirectory.append(std::to_string(nextBulkInfo.first)).append(".log")
     };
     std::ofstream logFile(logFileName, std::ios::app);
 
     if(!logFile)
     {
-        std::cout << "Cannot create log file " <<
+        errorOut << "Cannot create log file " <<
                      logFileName << " !" << std::endl;
         return;
     }

@@ -4,6 +4,7 @@
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: otus_hw_7_test.cpp
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/broadcasters.h
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/command_processor.h
+CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/homework_7.h
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/input_processor.h
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/input_reader.h
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/listeners.h

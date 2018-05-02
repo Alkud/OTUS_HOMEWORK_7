@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['publisher_2ecpp',['publisher.cpp',['../publisher_8cpp.html',1,'']]],
-  ['publisher_2eh',['publisher.h',['../publisher_8h.html',1,'']]]
+  ['otus_5fhw_5f7_5ftest_2ecpp',['otus_hw_7_test.cpp',['../otus__hw__7__test_8cpp.html',1,'']]]
 ];

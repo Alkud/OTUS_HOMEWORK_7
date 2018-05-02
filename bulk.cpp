@@ -1,13 +1,14 @@
+// bulk.cpp in Otus homework#7 project
+
+#include "homework_7.h"
+#include <stdexcept>
 #include <iostream>
-#include "command_processor.h"
 
 int main(int argc, char* argv[])
 {
-  size_t bulkSize{argc >= 2 ? std::atoi(argv[1]) : 3};
-  const CommandProcessor processor{std::cin, std::cout, bulkSize, '{', '}'};
   try
   {
-    processor.run();
+    homework(argc, argv, std::cin, std::cout);
   }
   catch(const std::exception& ex)
   {

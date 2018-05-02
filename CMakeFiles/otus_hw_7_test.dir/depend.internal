@@ -5,6 +5,7 @@ CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o
  /home/travis/build/Alkud/OTUS_HOMEWORK_7/otus_hw_7_test.cpp
  library/broadcasters.h
  library/command_processor.h
+ library/homework_7.h
  library/input_processor.h
  library/input_reader.h
  library/listeners.h

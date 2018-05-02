@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../bulk_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'bulk.cpp']]]
+  ['logger',['Logger',['../class_logger.html#a55d845904ca827b002b224ada9b61ca3',1,'Logger']]]
 ];

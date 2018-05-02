@@ -1,22 +1,21 @@
-Start testing: May 02 07:47 UTC
+Start testing: May 02 21:13 UTC
 ----------------------------------------------------------
 1/1 Testing: test_hw_7
 1/1 Test: test_hw_7
 Command: "/home/travis/build/Alkud/OTUS_HOMEWORK_7/otus_hw_7_test"
 Directory: /home/travis/build/Alkud/OTUS_HOMEWORK_7
-"test_hw_7" start time: May 02 07:47 UTC
+"test_hw_7" start time: May 02 21:13 UTC
 Output:
 ----------------------------------------------------------
-Running 7 test cases...
-bulk: cmd1, cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8
+Running 14 test cases...
 
 *** No errors detected
 <end of output>
 Test time =   1.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_hw_7" end time: May 02 07:47 UTC
+"test_hw_7" end time: May 02 21:13 UTC
 "test_hw_7" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-End testing: May 02 07:47 UTC
+End testing: May 02 21:13 UTC

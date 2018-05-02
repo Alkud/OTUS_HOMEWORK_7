@@ -9,6 +9,8 @@
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/otus_hw_7_test.cpp
 boost/test/unit_test.hpp
 -
+homework_7.h
+/home/travis/build/Alkud/OTUS_HOMEWORK_7/homework_7.h
 command_processor.h
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/command_processor.h
 string
@@ -46,6 +48,10 @@ library/publisher.h
 logger.h
 library/logger.h
 
+library/homework_7.h
+iostream
+-
+
 library/input_processor.h
 smart_buffer.h
 library/smart_buffer.h
@@ -76,6 +82,8 @@ library/listeners.h
 smart_buffer.h
 library/smart_buffer.h
 chrono
+-
+iostream
 -
 
 library/publisher.h

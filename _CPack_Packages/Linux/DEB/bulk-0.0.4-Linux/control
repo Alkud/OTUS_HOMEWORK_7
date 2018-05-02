@@ -1,9 +1,9 @@
 Package: bulk
-Version: 0.0.3
+Version: 0.0.4
 Section: devel
 Priority: optional
 Architecture: amd64
-Installed-Size: 309
+Installed-Size: 314
 Maintainer: alexandr_kudinov@mail.ru
 Description: bulk built using CMake
 

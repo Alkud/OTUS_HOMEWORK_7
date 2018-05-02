@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['inputprocessor',['InputProcessor',['../class_input_processor.html#a0de7273971fe64830598ae7dd4ca670f',1,'InputProcessor']]],
-  ['inputreader',['InputReader',['../class_input_reader.html#aa40c77f4ecf84363a60d5454e4d34a55',1,'InputReader']]]
+  ['homework',['homework',['../homework__7_8cpp.html#a0f995095dc43ac2b20224e66a57ee82c',1,'homework(int argc, char *argv[], std::istream &amp;inputStream, std::ostream &amp;outputStream):&#160;homework_7.cpp'],['../homework__7_8h.html#a0f995095dc43ac2b20224e66a57ee82c',1,'homework(int argc, char *argv[], std::istream &amp;inputStream, std::ostream &amp;outputStream):&#160;homework_7.cpp']]]
 ];
