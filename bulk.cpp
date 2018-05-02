@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[])
 {
-  size_t bulkSize{argc >= 1 ? std::atoi(argv[1]) : 3};
+  size_t bulkSize{argc >= 2 ? std::atoi(argv[1]) : 3};
   const CommandProcessor processor{std::cin, std::cout, bulkSize, '{', '}'};
   try
   {
