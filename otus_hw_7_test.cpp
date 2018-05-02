@@ -1,9 +1,12 @@
-// otus_hw_6.cpp in OTUS home work #6 project
+// otus_hw_7_test.cpp in Otus homework#7 project
 
 #define BOOST_TEST_MODULE OTUS_HW_7_TEST
 
 #include <boost/test/unit_test.hpp>
+#include "homework_7.h"
 #include "command_processor.h"
+
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -46,8 +49,125 @@ std::vector<std::string> getProcessorOutput
 
 BOOST_AUTO_TEST_SUITE(homework_7_test)
 
+BOOST_AUTO_TEST_CASE(objects_creation_failure)
+{
+  /* can't create input reader with null buffer pointer */
+  BOOST_CHECK_THROW((InputReader{std::cin, nullptr}), std::invalid_argument);
+  /* can't create publisher with null buffer pointer */
+  BOOST_CHECK_THROW((Publisher{nullptr, std::cout}), std::invalid_argument);
+  /* can't create logger with null buffer pointer */
+  BOOST_CHECK_THROW((Logger{nullptr, ""}), std::invalid_argument);
+}
+
+BOOST_AUTO_TEST_CASE(log_file_creation_failure)
+{
+  SmartBuffer<std::pair<size_t, std::string>> bulkBuffer;
+  std::stringstream outputStream{};
+  std::string badDirectoryName{"/non_existing_directory/"};
+
+  /* use bad directory name as constructor parameter */
+  Logger badLogger{&bulkBuffer, badDirectoryName, outputStream};
+  /* connect buffer to logger */
+  bulkBuffer.addNotificationListener(&badLogger);
+  /* putting some data to the buffer results in error message */
+  bulkBuffer.put(std::make_pair<size_t, std::string>(1234, "bulk"));
+
+  /* build log file name to check error message */
+  std::string logFileName
+  {
+    badDirectoryName.append(std::string{"1234.log"})
+  };
+
+  /* build error message */
+  std::stringstream errorMessage{};
+  errorMessage << "Cannot create log file " << logFileName << " !" << std::endl;
+
+  BOOST_CHECK(outputStream.str() == errorMessage.str());
+}
+
+BOOST_AUTO_TEST_CASE(trying_get_from_empty_buffer)
+{
+  SmartBuffer<std::pair<size_t, std::string>> emptyBuffer;
+  /* emptyBuffer.get() should throw an exception */
+  BOOST_CHECK_THROW((emptyBuffer.get()), std::out_of_range);
+}
+
+
+BOOST_AUTO_TEST_CASE(no_command_line_parameter)
+{
+  try
+  {
+    std::stringstream inputStream{"-1\n2\n"};
+    std::stringstream outputStream{};
+    char* arg[]{"/home/user/bulk"};
+    homework(1, arg, inputStream, outputStream);
+
+    BOOST_CHECK(outputStream.str() ==
+                "\nPlease enter bulk size (must be greater than 0): "
+                "\nPlease enter bulk size (must be greater than 0): ");
+  }
+  catch (const std::exception& ex)
+  {
+    std::cout << ex.what();
+  }
+}
+
+BOOST_AUTO_TEST_CASE(bad_command_line_parameter)
+{
+  try
+  {
+    std::stringstream inputStream{"3\n"};
+    std::stringstream outputStream{};
+    char* arg[]{"/home/user/bulk", "-s"};
+    homework(2, arg, inputStream, outputStream);
+
+    BOOST_CHECK(outputStream.str() ==
+                "\nOnly integer numbers are allowed"
+                "\nPlease enter bulk size (must be greater than 0): ");
+  }
+  catch (const std::exception& ex)
+  {
+    std::cout << ex.what();
+  }
+}
+
+BOOST_AUTO_TEST_CASE(wrong_command_line_parameter)
+{
+  try
+  {
+    std::stringstream inputStream{"3"};
+    std::stringstream outputStream{};
+    char* arg[]{"/home/user/bulk", "-10"};
+    homework(2, arg, inputStream, outputStream);
+
+    BOOST_CHECK(outputStream.str() ==
+                "\nPlease enter bulk size (must be greater than 0): ");
+  }
+  catch (const std::exception& ex)
+  {
+    std::cout << ex.what();
+  }
+}
+
 BOOST_AUTO_TEST_CASE(empty_input_test)
 {
+  try
+  {
+    auto processorOutput
+    {
+      getProcessorOutput(std::string{}, '{', '}', 0, false)
+    };
+    BOOST_CHECK(processorOutput.size() == 0);
+  }
+  catch (const std::exception& ex)
+  {
+    std::cout << ex.what();
+  }
+}
+
+BOOST_AUTO_TEST_CASE(empty_command_test)
+{
+  std::string testString1{"cmd1\n\ncmd2\ncmd3\ncmd4"};
   try
   {
     auto processorOutput
@@ -156,7 +276,7 @@ BOOST_AUTO_TEST_CASE(nested_bulks_test)
   }
 }
 
-BOOST_AUTO_TEST_CASE(unterminated_bulk_ignoring_test)
+BOOST_AUTO_TEST_CASE(unexpected_bulk_end_test)
 {
   try
   {
@@ -278,8 +398,6 @@ BOOST_AUTO_TEST_CASE(logging_test)
     std::string testString2{};
     std::getline(logFile, testString2);
 
-    std::cout << testString2 << std::endl;
-
     BOOST_CHECK(processorOutput.size() == 1);
     BOOST_CHECK(processorOutput[0] ==
                 "bulk: cmd1, cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8");
@@ -292,5 +410,7 @@ BOOST_AUTO_TEST_CASE(logging_test)
     std::cout << ex.what();
   }
 }
+
+
 
 BOOST_AUTO_TEST_SUITE_END()

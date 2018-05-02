@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.5.0, 2018-05-02T10:44:00. -->
+<!-- Written by QtCreator 4.5.0, 2018-05-02T21:41:12. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -339,7 +339,7 @@
      <value type="int">14</value>
     </valuelist>
     <value type="QString" key="CMakeProjectManager.CMakeRunConfiguation.Title">bulk</value>
-    <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.Arguments">3</value>
+    <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.Arguments">-1</value>
     <value type="bool" key="CMakeProjectManager.CMakeRunConfiguration.UseTerminal">true</value>
     <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.UserWorkingDirectory"></value>
     <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.UserWorkingDirectory.default">/home/user/CPP_Projects/OTUS/7_bulk/bulk_Qt_Cmake/bulk_broadcasters-listeners/build-bulk-Desktop_Qt_5_10_0_GCC_64bit-Debug</value>

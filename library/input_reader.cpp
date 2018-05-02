@@ -21,7 +21,10 @@ void InputReader::read()
   {
     while(std::getline(input, nextString))
     {
-      buffer->put(nextString);
+      if (nextString.empty() != true)
+      {
+        buffer->put(nextString);
+      }
     }
   }
   catch(std::exception& ex)
