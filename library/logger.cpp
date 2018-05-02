@@ -20,7 +20,7 @@ void Logger::reactNotification(NotificationBroadcaster* sender)
     auto nextBulkInfo{buffer->get(this)};
     std::string logFileName
     {
-      destinationDirectory.append(std::to_string(nextBulkInfo.first)).append(".log")
+      destinationDirectory + std::to_string(nextBulkInfo.first).append(".log")
     };
     std::ofstream logFile(logFileName, std::ios::app);
 
