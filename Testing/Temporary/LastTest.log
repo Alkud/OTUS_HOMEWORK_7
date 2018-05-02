@@ -1,10 +1,10 @@
-Start testing: May 02 21:13 UTC
+Start testing: May 02 21:28 UTC
 ----------------------------------------------------------
 1/1 Testing: test_hw_7
 1/1 Test: test_hw_7
 Command: "/home/travis/build/Alkud/OTUS_HOMEWORK_7/otus_hw_7_test"
 Directory: /home/travis/build/Alkud/OTUS_HOMEWORK_7
-"test_hw_7" start time: May 02 21:13 UTC
+"test_hw_7" start time: May 02 21:28 UTC
 Output:
 ----------------------------------------------------------
 Running 14 test cases...
@@ -14,8 +14,8 @@ Running 14 test cases...
 Test time =   1.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_hw_7" end time: May 02 21:13 UTC
+"test_hw_7" end time: May 02 21:28 UTC
 "test_hw_7" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-End testing: May 02 21:13 UTC
+End testing: May 02 21:28 UTC
