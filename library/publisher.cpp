@@ -3,7 +3,7 @@
 #include "publisher.h"
 
 
-Publisher::Publisher(SmartBuffer<std::pair<size_t, std::string>>* newBuffer, std::ostream& streamToPublish) :
+Publisher::Publisher(std::shared_ptr<SmartBuffer<std::pair<size_t, std::string> > > newBuffer, std::ostream& streamToPublish) :
   buffer{newBuffer}, outputStream{streamToPublish}
 {
   if (nullptr == buffer)
@@ -14,9 +14,9 @@ Publisher::Publisher(SmartBuffer<std::pair<size_t, std::string>>* newBuffer, std
 
 void Publisher::reactNotification(NotificationBroadcaster* sender)
 {
-  if (buffer == sender)
+  if (buffer.get() == sender)
   {
-    auto nextBulkInfo{buffer->get(this)};
+    auto nextBulkInfo{buffer->getItem(shared_from_this())};
     outputStream << nextBulkInfo.second << '\n';
   }
 }

@@ -4,7 +4,7 @@
 #include <string>
 #include <stdexcept>
 
-InputReader::InputReader(std::istream& newInput, SmartBuffer<std::string>* newBuffer) :
+InputReader::InputReader(std::istream& newInput, std::shared_ptr<SmartBuffer<std::string> > newBuffer) :
   input{newInput},
   buffer{newBuffer}
 {
@@ -21,10 +21,7 @@ void InputReader::read()
   {
     while(std::getline(input, nextString))
     {
-      if (nextString.empty() != true)
-      {
-        buffer->put(nextString);
-      }
+      buffer->putItem(std::move(nextString));
     }
   }
   catch(std::exception& ex)

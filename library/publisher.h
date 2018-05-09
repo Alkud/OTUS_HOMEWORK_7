@@ -5,18 +5,19 @@
 #include "listeners.h"
 #include "smart_buffer.h"
 #include <iostream>
+#include <memory>
 
-class Publisher : public NotificationListener
+class Publisher : public NotificationListener,
+                  public std::enable_shared_from_this<Publisher>
 {
 public:
-  Publisher(SmartBuffer<std::pair<size_t, std::string>>* newBuffer, std::ostream& streamToPublish);
+
+  Publisher(std::shared_ptr<SmartBuffer<std::pair<size_t, std::string>>> newBuffer, std::ostream& streamToPublish);
 
   void reactNotification(NotificationBroadcaster* sender) override;
 
 private:
 
-  friend class BulkProcessorCreator;
-
-  SmartBuffer<std::pair<size_t, std::string>>* buffer;
+  std::shared_ptr<SmartBuffer<std::pair<size_t, std::string>>> buffer;
   std::ostream& outputStream;
 };

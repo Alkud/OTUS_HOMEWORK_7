@@ -8,6 +8,7 @@
 class MessageListener
 {
 public:
+
   virtual ~MessageListener(){}
 
   /// Describes object's reaction to a message
@@ -17,6 +18,7 @@ public:
 class NotificationListener
 {
 public:
+
   virtual ~NotificationListener(){}
 
   /// Describes object's reaction to a notification

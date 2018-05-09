@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
   }
   catch(const std::exception& ex)
   {
-    std::cout << ex.what();
+    std::cerr << ex.what();
   }
   return 0;
 }

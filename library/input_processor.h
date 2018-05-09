@@ -9,14 +9,16 @@
 
 
 class InputProcessor : public NotificationListener,
-                       public MessageListener
+                       public MessageListener,
+                       public std::enable_shared_from_this<InputProcessor>
 {
 public:
+
   InputProcessor(size_t newBulkSize,
                  char newBulkOpenDelimiter,
                  char newBulkCloseDelimiter,
-                 SmartBuffer<std::string>* newInputBuffer,
-                 SmartBuffer<std::pair<size_t, std::string>>* newOutputBuffer);
+                 std::shared_ptr<SmartBuffer<std::string>> newInputBuffer,
+                 std::shared_ptr<SmartBuffer<std::pair<size_t, std::string>>> newOutputBuffer);
 
   void reactNotification(NotificationBroadcaster* sender) override;
 
@@ -24,8 +26,6 @@ public:
 
 
 private:
-
-  friend class BulkProcessorCreator;
 
   void sendCurrentBulk();
   void startNewBulk();
@@ -35,8 +35,8 @@ private:
   size_t bulkSize;
   std::string bulkOpenDelimiter;
   std::string bulkCloseDelimiter;
-  SmartBuffer<std::string>* inputBuffer;
-  SmartBuffer<std::pair<size_t, std::string>>* outputBuffer;
+  std::shared_ptr<SmartBuffer<std::string>> inputBuffer;
+  std::shared_ptr<SmartBuffer<std::pair<size_t, std::string>>> outputBuffer;
 
   std::deque<std::string> tempBuffer;
   bool customBulkStarted;

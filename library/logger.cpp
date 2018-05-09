@@ -3,7 +3,7 @@
 #include "logger.h"
 #include <fstream>
 
-Logger::Logger(SmartBuffer<std::pair<size_t, std::string>>* newBuffer,
+Logger::Logger(std::shared_ptr<SmartBuffer<std::pair<size_t, std::string> > > newBuffer,
                const std::string& newDestinationDirectory, std::ostream& newErrorOut) :
   buffer{newBuffer}, destinationDirectory{newDestinationDirectory}, errorOut{newErrorOut}
 {
@@ -15,11 +15,10 @@ Logger::Logger(SmartBuffer<std::pair<size_t, std::string>>* newBuffer,
 
 void Logger::reactNotification(NotificationBroadcaster* sender)
 {
-  if (buffer == sender)
+  if (buffer.get() == sender)
   {
-    auto nextBulkInfo{buffer->get(this)};
-    std::string logFileName
-    {
+    auto nextBulkInfo{buffer->getItem(shared_from_this())};
+    std::string logFileName{
       destinationDirectory + std::to_string(nextBulkInfo.first).append(".log")
     };
     std::ofstream logFile(logFileName, std::ios::app);

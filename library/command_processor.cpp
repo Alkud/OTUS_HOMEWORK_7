@@ -10,46 +10,31 @@ CommandProcessor::CommandProcessor
   char bulkOpenDelimiter,
   char bulkCloseDelimiter
  ) :
-  inputReader{}, inputBuffer{},
-  inputProcessor{}, outputBuffer{},
-  logger{}, publisher{}
-{
   /* creating buffers */
-  auto inputBufferPointer{std::make_unique<SmartBuffer<std::string>>()};
-  inputBuffer.swap(inputBufferPointer);
-  auto outputBufferPointer{std::make_unique<SmartBuffer<std::pair<size_t, std::string>>>()};
-  outputBuffer.swap(outputBufferPointer);
-
-
+  inputBuffer{std::make_shared<SmartBuffer<std::string>>()},
+  outputBuffer{std::make_shared<SmartBuffer<std::pair<size_t, std::string>>>()},
   /* creating command reader */
-  auto inputReaderPointer {std::make_unique<InputReader>(inputStream, inputBuffer.get())};
-  inputReader.swap(inputReaderPointer);
-
+  inputReader{std::make_shared<InputReader>(inputStream, inputBuffer)},
   /* creating command processor */
-  auto inputProcessorPointer
-  {
-    std::make_unique<InputProcessor>
+  inputProcessor{
+    std::make_shared<InputProcessor>
     (
       bulkSize,
       bulkOpenDelimiter, bulkCloseDelimiter,
-      inputBuffer.get(), outputBuffer.get()
+      inputBuffer, outputBuffer
     )
-  };
-  inputProcessor.swap(inputProcessorPointer);
-
+  },
   /* creating logger */
-  auto loggerPointer{std::make_unique<Logger>(outputBuffer.get())};
-  logger.swap(loggerPointer);
-
+  logger{std::make_shared<Logger>(outputBuffer)},
   /* creating publisher */
-  auto publisherPointer{std::make_unique<Publisher>(outputBuffer.get(), outputStream)};
-  publisher.swap(publisherPointer);
+  publisher{std::make_shared<Publisher>(outputBuffer, outputStream)}
 
+{
   /* connect broadcasters and listeners */
-  inputReader->addMessageListener(inputProcessor.get());
-  inputBuffer->addNotificationListener(inputProcessor.get());
-  outputBuffer->addNotificationListener(logger.get());
-  outputBuffer->addNotificationListener(publisher.get());
+  inputReader->addMessageListener(inputProcessor);
+  inputBuffer->addNotificationListener(inputProcessor);
+  outputBuffer->addNotificationListener(logger);
+  outputBuffer->addNotificationListener(publisher);
 }
 
 void CommandProcessor::run() const
