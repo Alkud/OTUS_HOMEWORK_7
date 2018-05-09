@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,77 +102,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_smart_buffer.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_smart_buffer.html">SmartBuffer</a> : <span class="keyword">public</span> <a class="code" href="class_notification_broadcaster.html">NotificationBroadcaster</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a1d65d304c40ebb6385542dd1e277c615">   14</a></span>&#160;  <a class="code" href="class_smart_buffer.html#a1d65d304c40ebb6385542dd1e277c615">SmartBuffer</a>() noexcept(false) {}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_smart_buffer_1_1_record.html">   20</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="struct_smart_buffer_1_1_record.html">Record</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  {</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_smart_buffer_1_1_record.html#a4f41c14c652b796a0757439ed0974c94">   22</a></span>&#160;    <a class="code" href="struct_smart_buffer_1_1_record.html#a4f41c14c652b796a0757439ed0974c94">Record</a>(T newValue) noexcept(<span class="keyword">false</span>) :</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <a class="code" href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">value</a>{newValue} {}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">   25</a></span>&#160;    T <a class="code" href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">value</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_smart_buffer_1_1_record.html#a809221224853e225ed4d46f5e7b5bd4c">   26</a></span>&#160;    std::set&lt;NotificationListener*&gt; <a class="code" href="struct_smart_buffer_1_1_record.html#a809221224853e225ed4d46f5e7b5bd4c">recipients</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  };</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a9b4cb1759cdac6e0d657654294df2d2e">   30</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_smart_buffer.html#a9b4cb1759cdac6e0d657654294df2d2e">put</a>(T newItem)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.emplace_back(newItem);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">notify</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a1e6604ab212a4e1a2adb5895ff643ce2">   40</a></span>&#160;  T <span class="keyword">get</span>(<a class="code" href="class_notification_listener.html">NotificationListener</a>* recipient = <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.empty() == <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">throw</span> std::out_of_range{<span class="stringliteral">&quot;Buffer is empty!&quot;</span>};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">nullptr</span> == recipient)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">auto</span> result {<a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.front().value};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">listeners</a>.empty() == <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.pop_front();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">auto</span> iter {<a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.begin()};</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">while</span>(iter != <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.end() &amp;&amp;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          (iter-&gt;recipients.insert(recipient)).second != <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      ++iter;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">auto</span> result {iter-&gt;value};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (iter-&gt;recipients == <a class="code" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">listeners</a>)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.erase(iter);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a7e06eb298ebf1fee84f54055050a229e">   72</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="class_smart_buffer.html#a7e06eb298ebf1fee84f54055050a229e">dataSize</a>()</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.size();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">   78</a></span>&#160;  std::deque&lt;Record&gt; <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="ttc" id="class_notification_broadcaster_html_a45b3e28a89409670ce527682e91cc09d"><div class="ttname"><a href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">NotificationBroadcaster::notify</a></div><div class="ttdeci">virtual void notify()</div><div class="ttdoc">Send notification to all listeners in the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:88</div></div>
-<div class="ttc" id="struct_smart_buffer_1_1_record_html_a809221224853e225ed4d46f5e7b5bd4c"><div class="ttname"><a href="struct_smart_buffer_1_1_record.html#a809221224853e225ed4d46f5e7b5bd4c">SmartBuffer::Record::recipients</a></div><div class="ttdeci">std::set&lt; NotificationListener * &gt; recipients</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:26</div></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a1d65d304c40ebb6385542dd1e277c615">   15</a></span>&#160;  <a class="code" href="class_smart_buffer.html#a1d65d304c40ebb6385542dd1e277c615">SmartBuffer</a>() noexcept(false) {}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_smart_buffer_1_1_record.html">   21</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="struct_smart_buffer_1_1_record.html">Record</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_smart_buffer_1_1_record.html#a4f41c14c652b796a0757439ed0974c94">   23</a></span>&#160;    <a class="code" href="struct_smart_buffer_1_1_record.html#a4f41c14c652b796a0757439ed0974c94">Record</a>(T newValue) noexcept(<span class="keyword">false</span>) :</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <a class="code" href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">value</a>{newValue} {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">   26</a></span>&#160;    T <a class="code" href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">value</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_smart_buffer_1_1_record.html#aef6e0760ac5b92c5620e2e4882ca3026">   27</a></span>&#160;    std::set&lt;std::shared_ptr&lt;NotificationListener&gt;&gt; <a class="code" href="struct_smart_buffer_1_1_record.html#aef6e0760ac5b92c5620e2e4882ca3026">recipients</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a709bf5649fa2645d9eb5490539857d79">   31</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_smart_buffer.html#a709bf5649fa2645d9eb5490539857d79">putItem</a>(<span class="keyword">const</span> T&amp; newItem)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.emplace_back(newItem);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">notify</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a7cae829c76ab3c25f64de412f615feb5">   38</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_smart_buffer.html#a7cae829c76ab3c25f64de412f615feb5">putItem</a>(T&amp;&amp; newItem)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.emplace_back(std::move(newItem));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">notify</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }  </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a365f79568bfdc78aeffde43403c239f1">   48</a></span>&#160;  T <a class="code" href="class_smart_buffer.html#a365f79568bfdc78aeffde43403c239f1">getItem</a>(<span class="keyword">const</span> std::shared_ptr&lt;NotificationListener&gt;&amp; recipient = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.empty() == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">throw</span> std::out_of_range{<span class="stringliteral">&quot;Buffer is empty!&quot;</span>};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">nullptr</span> == recipient)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">auto</span> result {<a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.front().value};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a>.empty() == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.pop_front();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">auto</span> iter {<a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.begin()};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">while</span>(iter != <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.end() &amp;&amp;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          (iter-&gt;recipients.insert(recipient)).second != <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      ++iter;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">auto</span> result {iter-&gt;value};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (iter-&gt;recipients == <a class="code" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.erase(iter);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#a7e06eb298ebf1fee84f54055050a229e">   80</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="class_smart_buffer.html#a7e06eb298ebf1fee84f54055050a229e">dataSize</a>()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.size();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#ad382a5e41ee64e471d66ec4887919089">   86</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_smart_buffer.html#ad382a5e41ee64e471d66ec4887919089">clear</a>()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>.clear();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">   93</a></span>&#160;  std::deque&lt;Record&gt; <a class="code" href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">data</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="ttc" id="class_notification_broadcaster_html_a45b3e28a89409670ce527682e91cc09d"><div class="ttname"><a href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">NotificationBroadcaster::notify</a></div><div class="ttdeci">virtual void notify()</div><div class="ttdoc">Send notification to all listeners in the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:93</div></div>
 <div class="ttc" id="class_smart_buffer_html"><div class="ttname"><a href="class_smart_buffer.html">SmartBuffer</a></div><div class="ttdef"><b>Definition:</b> smart_buffer.h:11</div></div>
 <div class="ttc" id="broadcasters_8h_html"><div class="ttname"><a href="broadcasters_8h.html">broadcasters.h</a></div></div>
-<div class="ttc" id="class_smart_buffer_html_a7e06eb298ebf1fee84f54055050a229e"><div class="ttname"><a href="class_smart_buffer.html#a7e06eb298ebf1fee84f54055050a229e">SmartBuffer::dataSize</a></div><div class="ttdeci">size_t dataSize()</div><div class="ttdoc">Get elements count in the queue. </div><div class="ttdef"><b>Definition:</b> smart_buffer.h:72</div></div>
-<div class="ttc" id="class_smart_buffer_html_ab8421f064b3e75d2ab00eebca5b6a74d"><div class="ttname"><a href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">SmartBuffer::data</a></div><div class="ttdeci">std::deque&lt; Record &gt; data</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:78</div></div>
-<div class="ttc" id="struct_smart_buffer_1_1_record_html"><div class="ttname"><a href="struct_smart_buffer_1_1_record.html">SmartBuffer::Record</a></div><div class="ttdef"><b>Definition:</b> smart_buffer.h:20</div></div>
-<div class="ttc" id="class_notification_listener_html"><div class="ttname"><a href="class_notification_listener.html">NotificationListener</a></div><div class="ttdef"><b>Definition:</b> listeners.h:17</div></div>
-<div class="ttc" id="class_notification_broadcaster_html_a55a439e781b6029ed0a0d8410efcf32e"><div class="ttname"><a href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">NotificationBroadcaster::listeners</a></div><div class="ttdeci">std::set&lt; NotificationListener * &gt; listeners</div><div class="ttdef"><b>Definition:</b> broadcasters.h:103</div></div>
-<div class="ttc" id="class_notification_broadcaster_html"><div class="ttname"><a href="class_notification_broadcaster.html">NotificationBroadcaster</a></div><div class="ttdef"><b>Definition:</b> broadcasters.h:61</div></div>
-<div class="ttc" id="struct_smart_buffer_1_1_record_html_a4f41c14c652b796a0757439ed0974c94"><div class="ttname"><a href="struct_smart_buffer_1_1_record.html#a4f41c14c652b796a0757439ed0974c94">SmartBuffer::Record::Record</a></div><div class="ttdeci">Record(T newValue) noexcept(false)</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:22</div></div>
-<div class="ttc" id="class_smart_buffer_html_a9b4cb1759cdac6e0d657654294df2d2e"><div class="ttname"><a href="class_smart_buffer.html#a9b4cb1759cdac6e0d657654294df2d2e">SmartBuffer::put</a></div><div class="ttdeci">void put(T newItem)</div><div class="ttdoc">Add new element to the buffer. </div><div class="ttdef"><b>Definition:</b> smart_buffer.h:30</div></div>
-<div class="ttc" id="class_smart_buffer_html_a1d65d304c40ebb6385542dd1e277c615"><div class="ttname"><a href="class_smart_buffer.html#a1d65d304c40ebb6385542dd1e277c615">SmartBuffer::SmartBuffer</a></div><div class="ttdeci">SmartBuffer() noexcept(false)</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:14</div></div>
-<div class="ttc" id="struct_smart_buffer_1_1_record_html_a42a026c794acfb53e0fbb63370ad7258"><div class="ttname"><a href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">SmartBuffer::Record::value</a></div><div class="ttdeci">T value</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:25</div></div>
+<div class="ttc" id="class_smart_buffer_html_a7e06eb298ebf1fee84f54055050a229e"><div class="ttname"><a href="class_smart_buffer.html#a7e06eb298ebf1fee84f54055050a229e">SmartBuffer::dataSize</a></div><div class="ttdeci">size_t dataSize()</div><div class="ttdoc">Get elements count in the queue. </div><div class="ttdef"><b>Definition:</b> smart_buffer.h:80</div></div>
+<div class="ttc" id="class_smart_buffer_html_ab8421f064b3e75d2ab00eebca5b6a74d"><div class="ttname"><a href="class_smart_buffer.html#ab8421f064b3e75d2ab00eebca5b6a74d">SmartBuffer::data</a></div><div class="ttdeci">std::deque&lt; Record &gt; data</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:93</div></div>
+<div class="ttc" id="struct_smart_buffer_1_1_record_html"><div class="ttname"><a href="struct_smart_buffer_1_1_record.html">SmartBuffer::Record</a></div><div class="ttdef"><b>Definition:</b> smart_buffer.h:21</div></div>
+<div class="ttc" id="struct_smart_buffer_1_1_record_html_aef6e0760ac5b92c5620e2e4882ca3026"><div class="ttname"><a href="struct_smart_buffer_1_1_record.html#aef6e0760ac5b92c5620e2e4882ca3026">SmartBuffer::Record::recipients</a></div><div class="ttdeci">std::set&lt; std::shared_ptr&lt; NotificationListener &gt; &gt; recipients</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:27</div></div>
+<div class="ttc" id="class_notification_broadcaster_html"><div class="ttname"><a href="class_notification_broadcaster.html">NotificationBroadcaster</a></div><div class="ttdef"><b>Definition:</b> broadcasters.h:64</div></div>
+<div class="ttc" id="class_smart_buffer_html_a7cae829c76ab3c25f64de412f615feb5"><div class="ttname"><a href="class_smart_buffer.html#a7cae829c76ab3c25f64de412f615feb5">SmartBuffer::putItem</a></div><div class="ttdeci">void putItem(T &amp;&amp;newItem)</div><div class="ttdoc">Add new element to the buffer. </div><div class="ttdef"><b>Definition:</b> smart_buffer.h:38</div></div>
+<div class="ttc" id="class_smart_buffer_html_a709bf5649fa2645d9eb5490539857d79"><div class="ttname"><a href="class_smart_buffer.html#a709bf5649fa2645d9eb5490539857d79">SmartBuffer::putItem</a></div><div class="ttdeci">void putItem(const T &amp;newItem)</div><div class="ttdoc">Add new element to the buffer. </div><div class="ttdef"><b>Definition:</b> smart_buffer.h:31</div></div>
+<div class="ttc" id="struct_smart_buffer_1_1_record_html_a4f41c14c652b796a0757439ed0974c94"><div class="ttname"><a href="struct_smart_buffer_1_1_record.html#a4f41c14c652b796a0757439ed0974c94">SmartBuffer::Record::Record</a></div><div class="ttdeci">Record(T newValue) noexcept(false)</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:23</div></div>
+<div class="ttc" id="class_notification_broadcaster_html_a98d16aaa12f53fcc747b65f447d1fb01"><div class="ttname"><a href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">NotificationBroadcaster::listeners</a></div><div class="ttdeci">std::set&lt; std::shared_ptr&lt; NotificationListener &gt; &gt; listeners</div><div class="ttdef"><b>Definition:</b> broadcasters.h:108</div></div>
+<div class="ttc" id="class_smart_buffer_html_a1d65d304c40ebb6385542dd1e277c615"><div class="ttname"><a href="class_smart_buffer.html#a1d65d304c40ebb6385542dd1e277c615">SmartBuffer::SmartBuffer</a></div><div class="ttdeci">SmartBuffer() noexcept(false)</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:15</div></div>
+<div class="ttc" id="struct_smart_buffer_1_1_record_html_a42a026c794acfb53e0fbb63370ad7258"><div class="ttname"><a href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">SmartBuffer::Record::value</a></div><div class="ttdeci">T value</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:26</div></div>
+<div class="ttc" id="class_smart_buffer_html_a365f79568bfdc78aeffde43403c239f1"><div class="ttname"><a href="class_smart_buffer.html#a365f79568bfdc78aeffde43403c239f1">SmartBuffer::getItem</a></div><div class="ttdeci">T getItem(const std::shared_ptr&lt; NotificationListener &gt; &amp;recipient=nullptr)</div><div class="ttdef"><b>Definition:</b> smart_buffer.h:48</div></div>
+<div class="ttc" id="class_smart_buffer_html_ad382a5e41ee64e471d66ec4887919089"><div class="ttname"><a href="class_smart_buffer.html#ad382a5e41ee64e471d66ec4887919089">SmartBuffer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clear data. </div><div class="ttdef"><b>Definition:</b> smart_buffer.h:86</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

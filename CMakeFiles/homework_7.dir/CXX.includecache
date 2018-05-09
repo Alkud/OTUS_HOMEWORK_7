@@ -11,6 +11,8 @@ set
 -
 string
 -
+memory
+-
 listeners.h
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/library/listeners.h
 
@@ -71,6 +73,8 @@ chrono
 -
 iostream
 -
+memory
+-
 
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/library/publisher.h
 listeners.h
@@ -78,6 +82,8 @@ listeners.h
 smart_buffer.h
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/library/smart_buffer.h
 iostream
+-
+memory
 -
 
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/library/smart_buffer.h

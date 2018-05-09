@@ -12,8 +12,9 @@ var indexSectionsWithContent =
   2: "bchilops",
   3: "abcdghilmnprs~",
   4: "bcdeilnoprtv",
-  5: "b",
-  6: "b"
+  5: "d",
+  6: "d",
+  7: "b"
 };
 
 var indexSectionNames =
@@ -23,8 +24,9 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "related",
-  6: "defines"
+  5: "enums",
+  6: "enumvalues",
+  7: "defines"
 };
 
 function convertToId(search)

@@ -4,6 +4,7 @@
 
 #include <set>
 #include <string>
+#include <memory>
 #include "listeners.h"
 
 
@@ -18,7 +19,8 @@ public:
   }
 
   /// Add a new listeners
-  virtual void addMessageListener(MessageListener* newListener)
+  virtual void
+  addMessageListener(std::shared_ptr<MessageListener> newListener)
   {
     if (newListener != nullptr)
     {
@@ -27,7 +29,8 @@ public:
   }
 
   /// Remove a listener
-  virtual void removeMessageListener(MessageListener* listener)
+  virtual void
+  removeMessageListener(std::shared_ptr<MessageListener> listener)
   {
     if (listener != nullptr)
     {
@@ -51,7 +54,7 @@ public:
   }
 
 protected:
-  std::set<MessageListener*> listeners;
+  std::set<std::shared_ptr<MessageListener>> listeners;
 };
 
 
@@ -67,7 +70,8 @@ public:
   }
 
   /// Add a listener to the list
-  virtual void addNotificationListener(NotificationListener* newListener)
+  virtual void
+  addNotificationListener(std::shared_ptr<NotificationListener> newListener)
   {
     if (newListener != nullptr)
     {
@@ -76,7 +80,8 @@ public:
   }
 
   /// Remove a listener from the list
-  virtual void removeNotificationListener(NotificationListener* listener)
+  virtual void
+  removeNotificationListener(std::shared_ptr<NotificationListener> listener)
   {
     if (listener != nullptr)
     {
@@ -100,5 +105,5 @@ public:
   }
 
 protected:
-  std::set<NotificationListener*> listeners;
+  std::set<std::shared_ptr<NotificationListener>> listeners;
 };

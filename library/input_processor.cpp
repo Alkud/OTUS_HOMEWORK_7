@@ -3,8 +3,8 @@
 #include "input_processor.h"
 
 InputProcessor::InputProcessor(size_t newBulkSize, char newBulkOpenDelimiter, char newBulkCloseDelimiter,
-                               SmartBuffer<std::string>* newInputBuffer,
-                               SmartBuffer<std::pair<size_t, std::string> >* newOutputBuffer) :
+                               std::shared_ptr<SmartBuffer<std::string> > newInputBuffer,
+                               std::shared_ptr<SmartBuffer<std::pair<size_t, std::string> > > newOutputBuffer) :
   bulkSize{newBulkSize > 1 ? newBulkSize : 1},
   bulkOpenDelimiter{newBulkOpenDelimiter},
   bulkCloseDelimiter{newBulkCloseDelimiter},
@@ -18,11 +18,11 @@ InputProcessor::InputProcessor(size_t newBulkSize, char newBulkOpenDelimiter, ch
 
 void InputProcessor::reactNotification(NotificationBroadcaster* sender)
 {
-  if (inputBuffer == sender)
+  if (inputBuffer.get() == sender)
   {
-    auto nextCommand {inputBuffer->get(this)};
+    auto nextCommand {inputBuffer->getItem(shared_from_this())};
 
-    if (bulkOpenDelimiter == nextCommand)          // bulk opend command received
+    if (bulkOpenDelimiter == nextCommand)          // bulk open command received
     {
       /* if a custom bulk isn't started,
        * send accumulated commands to the output buffer,
@@ -102,8 +102,7 @@ void InputProcessor::sendCurrentBulk()
   }
 
   /* convert bulk start time to integer ticks count */
-  auto ticksCount
-  {
+  auto ticksCount{
     std::chrono::duration_cast<std::chrono::seconds>
     (
       bulkStartTime.time_since_epoch()
@@ -111,7 +110,7 @@ void InputProcessor::sendCurrentBulk()
   };
 
   /* send the bulk to the output buffer */
-  outputBuffer->put(std::make_pair(ticksCount, newBulk));
+  outputBuffer->putItem(std::make_pair(ticksCount, newBulk));
 
   /*clear temporary buffer */
   tempBuffer.clear();

@@ -28,15 +28,16 @@ public:
 
   SmartBuffer<std::string>* getCommandBuffer()
   { return inputBuffer.get(); }
+
   SmartBuffer<std::pair<size_t, std::string>>* getBulkBuffer()
   { return outputBuffer.get(); }
 
 private:
-  std::unique_ptr<InputReader> inputReader;
-  std::unique_ptr<SmartBuffer<std::string>> inputBuffer;
-  std::unique_ptr<InputProcessor> inputProcessor;
-  std::unique_ptr<SmartBuffer<std::pair<size_t, std::string>>> outputBuffer;
-  std::unique_ptr<Logger> logger;
-  std::unique_ptr<Publisher> publisher;
+  std::shared_ptr<SmartBuffer<std::string>> inputBuffer;
+  std::shared_ptr<SmartBuffer<std::pair<size_t, std::string>>> outputBuffer;
+  std::shared_ptr<InputReader> inputReader;
+  std::shared_ptr<InputProcessor> inputProcessor;
+  std::shared_ptr<Logger> logger;
+  std::shared_ptr<Publisher> publisher;
 };
 

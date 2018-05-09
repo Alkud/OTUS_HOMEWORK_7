@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,12 +105,12 @@ Inheritance diagram for MessageBroadcaster:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a233b4bf529f9ba2b4c58a35134b3f64c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message_broadcaster.html#a233b4bf529f9ba2b4c58a35134b3f64c">~MessageBroadcaster</a> ()</td></tr>
 <tr class="separator:a233b4bf529f9ba2b4c58a35134b3f64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3184aea9889c9ea36af5cbefbd8e66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message_broadcaster.html#a3e3184aea9889c9ea36af5cbefbd8e66">addMessageListener</a> (<a class="el" href="class_message_listener.html">MessageListener</a> *newListener)</td></tr>
-<tr class="memdesc:a3e3184aea9889c9ea36af5cbefbd8e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new listeners.  <a href="#a3e3184aea9889c9ea36af5cbefbd8e66">More...</a><br/></td></tr>
-<tr class="separator:a3e3184aea9889c9ea36af5cbefbd8e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae198487bd28f5ed437f9166170bc38e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message_broadcaster.html#ae198487bd28f5ed437f9166170bc38e0">removeMessageListener</a> (<a class="el" href="class_message_listener.html">MessageListener</a> *listener)</td></tr>
-<tr class="memdesc:ae198487bd28f5ed437f9166170bc38e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a listener.  <a href="#ae198487bd28f5ed437f9166170bc38e0">More...</a><br/></td></tr>
-<tr class="separator:ae198487bd28f5ed437f9166170bc38e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb58085c6949df36993ae466434d082"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message_broadcaster.html#afcb58085c6949df36993ae466434d082">addMessageListener</a> (std::shared_ptr&lt; <a class="el" href="class_message_listener.html">MessageListener</a> &gt; newListener)</td></tr>
+<tr class="memdesc:afcb58085c6949df36993ae466434d082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new listeners.  <a href="#afcb58085c6949df36993ae466434d082">More...</a><br/></td></tr>
+<tr class="separator:afcb58085c6949df36993ae466434d082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f708f570c1a75f43779dc39ab151f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message_broadcaster.html#ad4f708f570c1a75f43779dc39ab151f2">removeMessageListener</a> (std::shared_ptr&lt; <a class="el" href="class_message_listener.html">MessageListener</a> &gt; listener)</td></tr>
+<tr class="memdesc:ad4f708f570c1a75f43779dc39ab151f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a listener.  <a href="#ad4f708f570c1a75f43779dc39ab151f2">More...</a><br/></td></tr>
+<tr class="separator:ad4f708f570c1a75f43779dc39ab151f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3905c8178f6ee1fdec4885642b291aef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message_broadcaster.html#a3905c8178f6ee1fdec4885642b291aef">sendMessage</a> (std::string message)</td></tr>
 <tr class="memdesc:a3905c8178f6ee1fdec4885642b291aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send instruction to all registered listeners.  <a href="#a3905c8178f6ee1fdec4885642b291aef">More...</a><br/></td></tr>
 <tr class="separator:a3905c8178f6ee1fdec4885642b291aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,8 +120,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:adadabd03b92dc9eeff6b45f4ffcd77ce"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_message_listener.html">MessageListener</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message_broadcaster.html#adadabd03b92dc9eeff6b45f4ffcd77ce">listeners</a></td></tr>
-<tr class="separator:adadabd03b92dc9eeff6b45f4ffcd77ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330c91a31c6e9f9acc83503fdacd3039"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_message_listener.html">MessageListener</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_message_broadcaster.html#a330c91a31c6e9f9acc83503fdacd3039">listeners</a></td></tr>
+<tr class="separator:a330c91a31c6e9f9acc83503fdacd3039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for a brodcaster, sending messages, containing instructions for listeners </p>
@@ -150,7 +151,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3e3184aea9889c9ea36af5cbefbd8e66"></a>
+<a class="anchor" id="afcb58085c6949df36993ae466434d082"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -160,7 +161,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void MessageBroadcaster::addMessageListener </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_message_listener.html">MessageListener</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_message_listener.html">MessageListener</a> &gt;&#160;</td>
           <td class="paramname"><em>newListener</em></td><td>)</td>
           <td></td>
         </tr>
@@ -201,7 +202,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae198487bd28f5ed437f9166170bc38e0"></a>
+<a class="anchor" id="ad4f708f570c1a75f43779dc39ab151f2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -211,7 +212,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void MessageBroadcaster::removeMessageListener </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_message_listener.html">MessageListener</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_message_listener.html">MessageListener</a> &gt;&#160;</td>
           <td class="paramname"><em>listener</em></td><td>)</td>
           <td></td>
         </tr>
@@ -254,7 +255,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="adadabd03b92dc9eeff6b45f4ffcd77ce"></a>
+<a class="anchor" id="a330c91a31c6e9f9acc83503fdacd3039"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -262,7 +263,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::set&lt;<a class="el" href="class_message_listener.html">MessageListener</a>*&gt; MessageBroadcaster::listeners</td>
+          <td class="memname">std::set&lt;std::shared_ptr&lt;<a class="el" href="class_message_listener.html">MessageListener</a>&gt; &gt; MessageBroadcaster::listeners</td>
         </tr>
       </table>
   </td>

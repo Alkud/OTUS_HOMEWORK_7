@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['publisher',['publisher',['../class_command_processor.html#a9868cb0a26e44e18e77ff66e38d41375',1,'CommandProcessor']]]
+  ['publisher',['publisher',['../class_command_processor.html#ae15983130cc1b6a3fd20d6187db4ad53',1,'CommandProcessor']]]
 ];

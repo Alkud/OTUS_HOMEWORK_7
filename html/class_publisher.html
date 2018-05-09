@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,7 +86,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="class_publisher-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Publisher Class Reference</div>  </div>
@@ -99,20 +98,20 @@ Inheritance diagram for Publisher:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_publisher__inherit__graph.png" border="0" usemap="#_publisher_inherit__map" alt="Inheritance graph"/></div>
 <map name="_publisher_inherit__map" id="_publisher_inherit__map">
-<area shape="rect" id="node2" href="class_notification_listener.html" title="NotificationListener" alt="" coords="5,5,139,32"/></map>
+<area shape="rect" id="node2" href="class_notification_listener.html" title="NotificationListener" alt="" coords="5,13,139,40"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Publisher:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_publisher__coll__graph.png" border="0" usemap="#_publisher_coll__map" alt="Collaboration graph"/></div>
 <map name="_publisher_coll__map" id="_publisher_coll__map">
-<area shape="rect" id="node2" href="class_notification_listener.html" title="NotificationListener" alt="" coords="5,91,139,117"/><area shape="rect" id="node3" href="class_smart_buffer.html" title="SmartBuffer\&lt; std::pair\l\&lt; size_t, std::string \&gt; \&gt;" alt="" coords="163,83,321,125"/><area shape="rect" id="node4" href="class_notification_broadcaster.html" title="NotificationBroadcaster" alt="" coords="163,5,321,32"/></map>
+<area shape="rect" id="node2" href="class_notification_listener.html" title="NotificationListener" alt="" coords="5,13,139,40"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a802e79ea3cd8e1d169a7fb6368966104"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_publisher.html#a802e79ea3cd8e1d169a7fb6368966104">Publisher</a> (<a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt; *newBuffer, std::ostream &amp;streamToPublish)</td></tr>
-<tr class="separator:a802e79ea3cd8e1d169a7fb6368966104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382a864a4197594053de514e63f12664"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_publisher.html#a382a864a4197594053de514e63f12664">Publisher</a> (std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt;&gt; newBuffer, std::ostream &amp;streamToPublish)</td></tr>
+<tr class="separator:a382a864a4197594053de514e63f12664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98d782b1eab065a5f93e494d41c77f0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_publisher.html#a98d782b1eab065a5f93e494d41c77f0f">reactNotification</a> (<a class="el" href="class_notification_broadcaster.html">NotificationBroadcaster</a> *sender) override</td></tr>
 <tr class="memdesc:a98d782b1eab065a5f93e494d41c77f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes object's reaction to a notification.  <a href="#a98d782b1eab065a5f93e494d41c77f0f">More...</a><br/></td></tr>
 <tr class="separator:a98d782b1eab065a5f93e494d41c77f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,26 +121,22 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a37dfd8f083f42f47af63cf511bf7b730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, <br class="typebreak"/>
-std::string &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_publisher.html#a37dfd8f083f42f47af63cf511bf7b730">buffer</a></td></tr>
-<tr class="separator:a37dfd8f083f42f47af63cf511bf7b730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab701e176c3a80f723beb1bb44f6e1d8b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a><br class="typebreak"/>
+&lt; std::pair&lt; size_t, <br class="typebreak"/>
+std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_publisher.html#ab701e176c3a80f723beb1bb44f6e1d8b">buffer</a></td></tr>
+<tr class="separator:ab701e176c3a80f723beb1bb44f6e1d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29e9fcf9a6c0db3313b539b55c423152"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_publisher.html#a29e9fcf9a6c0db3313b539b55c423152">outputStream</a></td></tr>
 <tr class="separator:a29e9fcf9a6c0db3313b539b55c423152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:ae1f261b8d03cc430005074f340e61ab8"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_publisher.html#ae1f261b8d03cc430005074f340e61ab8">BulkProcessorCreator</a></td></tr>
-<tr class="separator:ae1f261b8d03cc430005074f340e61ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a802e79ea3cd8e1d169a7fb6368966104"></a>
+<a class="anchor" id="a382a864a4197594053de514e63f12664"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Publisher::Publisher </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt; *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt;&gt;&#160;</td>
           <td class="paramname"><em>newBuffer</em>, </td>
         </tr>
         <tr>
@@ -189,29 +184,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="ae1f261b8d03cc430005074f340e61ab8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class BulkProcessorCreator</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a37dfd8f083f42f47af63cf511bf7b730"></a>
+<a class="anchor" id="ab701e176c3a80f723beb1bb44f6e1d8b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -219,7 +193,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::pair&lt;size_t, std::string&gt; &gt;* Publisher::buffer</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::pair&lt;size_t, std::string&gt; &gt; &gt; Publisher::buffer</td>
         </tr>
       </table>
   </td>

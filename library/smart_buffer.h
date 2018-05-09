@@ -11,6 +11,7 @@ template<class T>
 class SmartBuffer : public NotificationBroadcaster
 {
 public:
+
   SmartBuffer() noexcept(false) {}
 
   /// Each element in the buffer has the list of recipients.
@@ -23,21 +24,28 @@ public:
       value{newValue} {}
 
     T value;
-    std::set<NotificationListener*> recipients;
+    std::set<std::shared_ptr<NotificationListener>> recipients;
   };
 
   /// Add new element to the buffer
-  void put(T newItem)
+  void putItem(const T& newItem)
   {
     data.emplace_back(newItem);
     notify();
   }
 
+  /// Add new element to the buffer
+  void putItem(T&& newItem)
+  {
+    data.emplace_back(std::move(newItem));
+    notify();
+  }  
+
   /// Each recipient starts looking from the first element in the queue.
   /// When an element is found that wasn't received yet by this recipient,
-  /// the recipients gets the value of this element and updates pecipient list
+  /// the recipient gets the value of this element and updates pecipient list
   /// for this element.
-  T get(NotificationListener* recipient = nullptr)
+  T getItem(const std::shared_ptr<NotificationListener>& recipient = nullptr)
   {
     if (data.empty() == true)
     {
@@ -74,7 +82,14 @@ public:
     return data.size();
   }
 
+  /// Clear data
+  void clear()
+  {
+    data.clear();
+  }
+
 private:
+
   std::deque<Record> data;
 };
 

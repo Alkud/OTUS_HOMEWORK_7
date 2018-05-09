@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,21 +109,21 @@ std::string &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1e62ed2ea561b4e4cf5fe28c3b562b30"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_input_reader.html">InputReader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#a1e62ed2ea561b4e4cf5fe28c3b562b30">inputReader</a></td></tr>
-<tr class="separator:a1e62ed2ea561b4e4cf5fe28c3b562b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a571338ab8a9278c88fa286323d92fa93"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a><br class="typebreak"/>
-&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#a571338ab8a9278c88fa286323d92fa93">inputBuffer</a></td></tr>
-<tr class="separator:a571338ab8a9278c88fa286323d92fa93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac12c93ba03bea09a779182703b6fb031"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_input_processor.html">InputProcessor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#ac12c93ba03bea09a779182703b6fb031">inputProcessor</a></td></tr>
-<tr class="separator:ac12c93ba03bea09a779182703b6fb031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e5b72ec653a864155a9c066618bec00"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a><br class="typebreak"/>
+<tr class="memitem:afe9f366054fee81eb562835af8b854ae"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a><br class="typebreak"/>
+&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#afe9f366054fee81eb562835af8b854ae">inputBuffer</a></td></tr>
+<tr class="separator:afe9f366054fee81eb562835af8b854ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0407e65fb607f3dc922b9b27c9531d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a><br class="typebreak"/>
 &lt; std::pair&lt; size_t, <br class="typebreak"/>
-std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#a3e5b72ec653a864155a9c066618bec00">outputBuffer</a></td></tr>
-<tr class="separator:a3e5b72ec653a864155a9c066618bec00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d5e76652176001beac105313986b7ce"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_logger.html">Logger</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#a6d5e76652176001beac105313986b7ce">logger</a></td></tr>
-<tr class="separator:a6d5e76652176001beac105313986b7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9868cb0a26e44e18e77ff66e38d41375"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_publisher.html">Publisher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#a9868cb0a26e44e18e77ff66e38d41375">publisher</a></td></tr>
-<tr class="separator:a9868cb0a26e44e18e77ff66e38d41375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#a6d0407e65fb607f3dc922b9b27c9531d">outputBuffer</a></td></tr>
+<tr class="separator:a6d0407e65fb607f3dc922b9b27c9531d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a680c9a4938cb7e971d67de3c2ee93fdd"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_input_reader.html">InputReader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#a680c9a4938cb7e971d67de3c2ee93fdd">inputReader</a></td></tr>
+<tr class="separator:a680c9a4938cb7e971d67de3c2ee93fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d6cc797fa4718c8cb4290124bfe3362"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_input_processor.html">InputProcessor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#a3d6cc797fa4718c8cb4290124bfe3362">inputProcessor</a></td></tr>
+<tr class="separator:a3d6cc797fa4718c8cb4290124bfe3362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfdb9987b9b476b86dca6a3f38d71411"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_logger.html">Logger</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#abfdb9987b9b476b86dca6a3f38d71411">logger</a></td></tr>
+<tr class="separator:abfdb9987b9b476b86dca6a3f38d71411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15983130cc1b6a3fd20d6187db4ad53"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_publisher.html">Publisher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_processor.html#ae15983130cc1b6a3fd20d6187db4ad53">publisher</a></td></tr>
+<tr class="separator:ae15983130cc1b6a3fd20d6187db4ad53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3c884b3f32f7c67cbe06b99a4aeee518"></a>
@@ -235,7 +235,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a571338ab8a9278c88fa286323d92fa93"></a>
+<a class="anchor" id="afe9f366054fee81eb562835af8b854ae"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -243,7 +243,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::string&gt; &gt; CommandProcessor::inputBuffer</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::string&gt; &gt; CommandProcessor::inputBuffer</td>
         </tr>
       </table>
   </td>
@@ -255,7 +255,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 
 </div>
 </div>
-<a class="anchor" id="ac12c93ba03bea09a779182703b6fb031"></a>
+<a class="anchor" id="a3d6cc797fa4718c8cb4290124bfe3362"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -263,7 +263,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_input_processor.html">InputProcessor</a>&gt; CommandProcessor::inputProcessor</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_input_processor.html">InputProcessor</a>&gt; CommandProcessor::inputProcessor</td>
         </tr>
       </table>
   </td>
@@ -275,7 +275,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 
 </div>
 </div>
-<a class="anchor" id="a1e62ed2ea561b4e4cf5fe28c3b562b30"></a>
+<a class="anchor" id="a680c9a4938cb7e971d67de3c2ee93fdd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -283,7 +283,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_input_reader.html">InputReader</a>&gt; CommandProcessor::inputReader</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_input_reader.html">InputReader</a>&gt; CommandProcessor::inputReader</td>
         </tr>
       </table>
   </td>
@@ -295,7 +295,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 
 </div>
 </div>
-<a class="anchor" id="a6d5e76652176001beac105313986b7ce"></a>
+<a class="anchor" id="abfdb9987b9b476b86dca6a3f38d71411"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -303,7 +303,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_logger.html">Logger</a>&gt; CommandProcessor::logger</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_logger.html">Logger</a>&gt; CommandProcessor::logger</td>
         </tr>
       </table>
   </td>
@@ -315,7 +315,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 
 </div>
 </div>
-<a class="anchor" id="a3e5b72ec653a864155a9c066618bec00"></a>
+<a class="anchor" id="a6d0407e65fb607f3dc922b9b27c9531d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -323,7 +323,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::pair&lt;size_t, std::string&gt; &gt; &gt; CommandProcessor::outputBuffer</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt;std::pair&lt;size_t, std::string&gt; &gt; &gt; CommandProcessor::outputBuffer</td>
         </tr>
       </table>
   </td>
@@ -335,7 +335,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 
 </div>
 </div>
-<a class="anchor" id="a9868cb0a26e44e18e77ff66e38d41375"></a>
+<a class="anchor" id="ae15983130cc1b6a3fd20d6187db4ad53"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -343,7 +343,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_publisher.html">Publisher</a>&gt; CommandProcessor::publisher</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_publisher.html">Publisher</a>&gt; CommandProcessor::publisher</td>
         </tr>
       </table>
   </td>

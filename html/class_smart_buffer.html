@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,23 +118,29 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d65d304c40ebb6385542dd1e277c615"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_buffer.html#a1d65d304c40ebb6385542dd1e277c615">SmartBuffer</a> () noexcept(false)</td></tr>
 <tr class="separator:a1d65d304c40ebb6385542dd1e277c615"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b4cb1759cdac6e0d657654294df2d2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_buffer.html#a9b4cb1759cdac6e0d657654294df2d2e">put</a> (T newItem)</td></tr>
-<tr class="memdesc:a9b4cb1759cdac6e0d657654294df2d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new element to the buffer.  <a href="#a9b4cb1759cdac6e0d657654294df2d2e">More...</a><br/></td></tr>
-<tr class="separator:a9b4cb1759cdac6e0d657654294df2d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e6604ab212a4e1a2adb5895ff643ce2"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_buffer.html#a1e6604ab212a4e1a2adb5895ff643ce2">get</a> (<a class="el" href="class_notification_listener.html">NotificationListener</a> *recipient=nullptr)</td></tr>
-<tr class="separator:a1e6604ab212a4e1a2adb5895ff643ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a709bf5649fa2645d9eb5490539857d79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_buffer.html#a709bf5649fa2645d9eb5490539857d79">putItem</a> (const T &amp;newItem)</td></tr>
+<tr class="memdesc:a709bf5649fa2645d9eb5490539857d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new element to the buffer.  <a href="#a709bf5649fa2645d9eb5490539857d79">More...</a><br/></td></tr>
+<tr class="separator:a709bf5649fa2645d9eb5490539857d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cae829c76ab3c25f64de412f615feb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_buffer.html#a7cae829c76ab3c25f64de412f615feb5">putItem</a> (T &amp;&amp;newItem)</td></tr>
+<tr class="memdesc:a7cae829c76ab3c25f64de412f615feb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new element to the buffer.  <a href="#a7cae829c76ab3c25f64de412f615feb5">More...</a><br/></td></tr>
+<tr class="separator:a7cae829c76ab3c25f64de412f615feb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365f79568bfdc78aeffde43403c239f1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_buffer.html#a365f79568bfdc78aeffde43403c239f1">getItem</a> (const std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &amp;recipient=nullptr)</td></tr>
+<tr class="separator:a365f79568bfdc78aeffde43403c239f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e06eb298ebf1fee84f54055050a229e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_buffer.html#a7e06eb298ebf1fee84f54055050a229e">dataSize</a> ()</td></tr>
 <tr class="memdesc:a7e06eb298ebf1fee84f54055050a229e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get elements count in the queue.  <a href="#a7e06eb298ebf1fee84f54055050a229e">More...</a><br/></td></tr>
 <tr class="separator:a7e06eb298ebf1fee84f54055050a229e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad382a5e41ee64e471d66ec4887919089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_smart_buffer.html#ad382a5e41ee64e471d66ec4887919089">clear</a> ()</td></tr>
+<tr class="memdesc:ad382a5e41ee64e471d66ec4887919089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear data.  <a href="#ad382a5e41ee64e471d66ec4887919089">More...</a><br/></td></tr>
+<tr class="separator:ad382a5e41ee64e471d66ec4887919089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_notification_broadcaster"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_notification_broadcaster')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_notification_broadcaster.html">NotificationBroadcaster</a></td></tr>
 <tr class="memitem:a19ab9abeba5b04f6abb4f633b405942b inherit pub_methods_class_notification_broadcaster"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a19ab9abeba5b04f6abb4f633b405942b">~NotificationBroadcaster</a> ()</td></tr>
 <tr class="separator:a19ab9abeba5b04f6abb4f633b405942b inherit pub_methods_class_notification_broadcaster"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a201c85499baebf9f97f050deb4a21e53 inherit pub_methods_class_notification_broadcaster"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a201c85499baebf9f97f050deb4a21e53">addNotificationListener</a> (<a class="el" href="class_notification_listener.html">NotificationListener</a> *newListener)</td></tr>
-<tr class="memdesc:a201c85499baebf9f97f050deb4a21e53 inherit pub_methods_class_notification_broadcaster"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a listener to the list.  <a href="#a201c85499baebf9f97f050deb4a21e53">More...</a><br/></td></tr>
-<tr class="separator:a201c85499baebf9f97f050deb4a21e53 inherit pub_methods_class_notification_broadcaster"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad24bbbbddeea101de97231aed5a59b7f inherit pub_methods_class_notification_broadcaster"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#ad24bbbbddeea101de97231aed5a59b7f">removeNotificationListener</a> (<a class="el" href="class_notification_listener.html">NotificationListener</a> *listener)</td></tr>
-<tr class="memdesc:ad24bbbbddeea101de97231aed5a59b7f inherit pub_methods_class_notification_broadcaster"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a listener from the list.  <a href="#ad24bbbbddeea101de97231aed5a59b7f">More...</a><br/></td></tr>
-<tr class="separator:ad24bbbbddeea101de97231aed5a59b7f inherit pub_methods_class_notification_broadcaster"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840987f5c7baac402cc4453ce879c48a inherit pub_methods_class_notification_broadcaster"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a840987f5c7baac402cc4453ce879c48a">addNotificationListener</a> (std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; newListener)</td></tr>
+<tr class="memdesc:a840987f5c7baac402cc4453ce879c48a inherit pub_methods_class_notification_broadcaster"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a listener to the list.  <a href="#a840987f5c7baac402cc4453ce879c48a">More...</a><br/></td></tr>
+<tr class="separator:a840987f5c7baac402cc4453ce879c48a inherit pub_methods_class_notification_broadcaster"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa526055d9a5d462ab7b155b72e0e90f4 inherit pub_methods_class_notification_broadcaster"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#aa526055d9a5d462ab7b155b72e0e90f4">removeNotificationListener</a> (std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; listener)</td></tr>
+<tr class="memdesc:aa526055d9a5d462ab7b155b72e0e90f4 inherit pub_methods_class_notification_broadcaster"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a listener from the list.  <a href="#aa526055d9a5d462ab7b155b72e0e90f4">More...</a><br/></td></tr>
+<tr class="separator:aa526055d9a5d462ab7b155b72e0e90f4 inherit pub_methods_class_notification_broadcaster"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45b3e28a89409670ce527682e91cc09d inherit pub_methods_class_notification_broadcaster"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">notify</a> ()</td></tr>
 <tr class="memdesc:a45b3e28a89409670ce527682e91cc09d inherit pub_methods_class_notification_broadcaster"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send notification to all listeners in the list.  <a href="#a45b3e28a89409670ce527682e91cc09d">More...</a><br/></td></tr>
 <tr class="separator:a45b3e28a89409670ce527682e91cc09d inherit pub_methods_class_notification_broadcaster"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,15 +156,16 @@ Private Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_notification_broadcaster"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_notification_broadcaster')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_notification_broadcaster.html">NotificationBroadcaster</a></td></tr>
-<tr class="memitem:a55a439e781b6029ed0a0d8410efcf32e inherit pro_attribs_class_notification_broadcaster"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">listeners</a></td></tr>
-<tr class="separator:a55a439e781b6029ed0a0d8410efcf32e inherit pro_attribs_class_notification_broadcaster"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d16aaa12f53fcc747b65f447d1fb01 inherit pro_attribs_class_notification_broadcaster"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a></td></tr>
+<tr class="separator:a98d16aaa12f53fcc747b65f447d1fb01 inherit pro_attribs_class_notification_broadcaster"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1d65d304c40ebb6385542dd1e277c615"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -180,11 +187,38 @@ template&lt;class T&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad382a5e41ee64e471d66ec4887919089"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear data. </p>
+
+</div>
+</div>
 <a class="anchor" id="a7e06eb298ebf1fee84f54055050a229e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -207,19 +241,19 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1e6604ab212a4e1a2adb5895ff643ce2"></a>
+<a class="anchor" id="a365f79568bfdc78aeffde43403c239f1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; T &gt;::get </td>
+          <td class="memname">T <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; T &gt;::getItem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_notification_listener.html">NotificationListener</a> *&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>recipient</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
         </tr>
@@ -230,23 +264,51 @@ template&lt;class T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Each recipient starts looking from the first element in the queue. When an element is found that wasn't received yet by this recipient, the recipients gets the value of this element and updates pecipient list for this element. </p>
+<p>Each recipient starts looking from the first element in the queue. When an element is found that wasn't received yet by this recipient, the recipient gets the value of this element and updates pecipient list for this element. </p>
 
 </div>
 </div>
-<a class="anchor" id="a9b4cb1759cdac6e0d657654294df2d2e"></a>
+<a class="anchor" id="a709bf5649fa2645d9eb5490539857d79"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; T &gt;::put </td>
+          <td class="memname">void <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; T &gt;::putItem </td>
           <td>(</td>
-          <td class="paramtype">T&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>newItem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add new element to the buffer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7cae829c76ab3c25f64de412f615feb5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; T &gt;::putItem </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
           <td class="paramname"><em>newItem</em></td><td>)</td>
           <td></td>
         </tr>
@@ -267,7 +329,7 @@ template&lt;class T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

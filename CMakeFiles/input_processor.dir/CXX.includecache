@@ -11,6 +11,8 @@ set
 -
 string
 -
+memory
+-
 listeners.h
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/library/listeners.h
 

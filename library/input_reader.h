@@ -10,12 +10,14 @@
 class InputReader : public MessageBroadcaster
 {
 public:
-  InputReader(std::istream& newInput, SmartBuffer<std::string>* newBuffer);
+
+  InputReader(std::istream& newInput, std::shared_ptr<SmartBuffer<std::string>> newBuffer);
 
   /// Read from input stream until eof
   void read();
 
 private:
+
   std::istream& input;
-  SmartBuffer<std::string>* buffer;
+  std::shared_ptr<SmartBuffer<std::string>> buffer;
 };

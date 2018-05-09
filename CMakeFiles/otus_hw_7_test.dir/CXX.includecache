@@ -31,6 +31,8 @@ set
 -
 string
 -
+memory
+-
 listeners.h
 library/listeners.h
 
@@ -85,6 +87,8 @@ chrono
 -
 iostream
 -
+memory
+-
 
 library/publisher.h
 listeners.h
@@ -92,6 +96,8 @@ library/listeners.h
 smart_buffer.h
 library/smart_buffer.h
 iostream
+-
+memory
 -
 
 library/smart_buffer.h

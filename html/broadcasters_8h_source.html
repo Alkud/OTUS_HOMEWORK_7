@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,109 +95,112 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="listeners_8h.html">listeners.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="listeners_8h.html">listeners.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_message_broadcaster.html">MessageBroadcaster</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:  </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#a233b4bf529f9ba2b4c58a35134b3f64c">   15</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_message_broadcaster.html#a233b4bf529f9ba2b4c58a35134b3f64c">~MessageBroadcaster</a>()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_message_broadcaster.html#aaf627669b4bf8abc5c3d78bf21192ffd">clearMessageListenersList</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#a3e3184aea9889c9ea36af5cbefbd8e66">   21</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_message_broadcaster.html#a3e3184aea9889c9ea36af5cbefbd8e66">addMessageListener</a>(<a class="code" href="class_message_listener.html">MessageListener</a>* newListener)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (newListener != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <a class="code" href="class_message_broadcaster.html#adadabd03b92dc9eeff6b45f4ffcd77ce">listeners</a>.insert(newListener);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#ae198487bd28f5ed437f9166170bc38e0">   30</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_message_broadcaster.html#ae198487bd28f5ed437f9166170bc38e0">removeMessageListener</a>(<a class="code" href="class_message_listener.html">MessageListener</a>* listener)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (listener != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <a class="code" href="class_message_broadcaster.html#adadabd03b92dc9eeff6b45f4ffcd77ce">listeners</a>.erase(listener);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#a3905c8178f6ee1fdec4885642b291aef">   39</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_message_broadcaster.html#a3905c8178f6ee1fdec4885642b291aef">sendMessage</a>(std::string message)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; listener : <a class="code" href="class_message_broadcaster.html#adadabd03b92dc9eeff6b45f4ffcd77ce">listeners</a>)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      listener-&gt;reactMessage(<span class="keyword">this</span>, message);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#aaf627669b4bf8abc5c3d78bf21192ffd">   48</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_message_broadcaster.html#aaf627669b4bf8abc5c3d78bf21192ffd">clearMessageListenersList</a>()</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_message_broadcaster.html#adadabd03b92dc9eeff6b45f4ffcd77ce">listeners</a>.clear();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#adadabd03b92dc9eeff6b45f4ffcd77ce">   54</a></span>&#160;  std::set&lt;MessageListener*&gt; <a class="code" href="class_message_broadcaster.html#adadabd03b92dc9eeff6b45f4ffcd77ce">listeners</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html">   61</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_notification_broadcaster.html">NotificationBroadcaster</a></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a19ab9abeba5b04f6abb4f633b405942b">   64</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_notification_broadcaster.html#a19ab9abeba5b04f6abb4f633b405942b">~NotificationBroadcaster</a>()</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_notification_broadcaster.html#a681a31b00207d84d30bb78baed5d165d">clearNotificationListenersList</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a201c85499baebf9f97f050deb4a21e53">   70</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_notification_broadcaster.html#a201c85499baebf9f97f050deb4a21e53">addNotificationListener</a>(<a class="code" href="class_notification_listener.html">NotificationListener</a>* newListener)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (newListener != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <a class="code" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">listeners</a>.insert(newListener);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#ad24bbbbddeea101de97231aed5a59b7f">   79</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_notification_broadcaster.html#ad24bbbbddeea101de97231aed5a59b7f">removeNotificationListener</a>(<a class="code" href="class_notification_listener.html">NotificationListener</a>* listener)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (listener != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">listeners</a>.erase(listener);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">   88</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">notify</a>()</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; listener : <a class="code" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">listeners</a>)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      listener-&gt;reactNotification(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a681a31b00207d84d30bb78baed5d165d">   97</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_notification_broadcaster.html#a681a31b00207d84d30bb78baed5d165d">clearNotificationListenersList</a>()</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">listeners</a>.clear();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">  103</a></span>&#160;  std::set&lt;NotificationListener*&gt; <a class="code" href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">listeners</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
-<div class="ttc" id="class_notification_broadcaster_html_a45b3e28a89409670ce527682e91cc09d"><div class="ttname"><a href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">NotificationBroadcaster::notify</a></div><div class="ttdeci">virtual void notify()</div><div class="ttdoc">Send notification to all listeners in the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:88</div></div>
-<div class="ttc" id="class_message_broadcaster_html"><div class="ttname"><a href="class_message_broadcaster.html">MessageBroadcaster</a></div><div class="ttdef"><b>Definition:</b> broadcasters.h:12</div></div>
-<div class="ttc" id="class_message_broadcaster_html_a3905c8178f6ee1fdec4885642b291aef"><div class="ttname"><a href="class_message_broadcaster.html#a3905c8178f6ee1fdec4885642b291aef">MessageBroadcaster::sendMessage</a></div><div class="ttdeci">virtual void sendMessage(std::string message)</div><div class="ttdoc">Send instruction to all registered listeners. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:39</div></div>
-<div class="ttc" id="class_message_broadcaster_html_aaf627669b4bf8abc5c3d78bf21192ffd"><div class="ttname"><a href="class_message_broadcaster.html#aaf627669b4bf8abc5c3d78bf21192ffd">MessageBroadcaster::clearMessageListenersList</a></div><div class="ttdeci">virtual void clearMessageListenersList()</div><div class="ttdoc">Remove all listenenrs from the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:48</div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_message_broadcaster.html">MessageBroadcaster</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:  </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#a233b4bf529f9ba2b4c58a35134b3f64c">   16</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_message_broadcaster.html#a233b4bf529f9ba2b4c58a35134b3f64c">~MessageBroadcaster</a>()</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_message_broadcaster.html#aaf627669b4bf8abc5c3d78bf21192ffd">clearMessageListenersList</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#afcb58085c6949df36993ae466434d082">   23</a></span>&#160;  <a class="code" href="class_message_broadcaster.html#afcb58085c6949df36993ae466434d082">addMessageListener</a>(std::shared_ptr&lt;MessageListener&gt; newListener)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (newListener != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <a class="code" href="class_message_broadcaster.html#a330c91a31c6e9f9acc83503fdacd3039">listeners</a>.insert(newListener);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#ad4f708f570c1a75f43779dc39ab151f2">   33</a></span>&#160;  <a class="code" href="class_message_broadcaster.html#ad4f708f570c1a75f43779dc39ab151f2">removeMessageListener</a>(std::shared_ptr&lt;MessageListener&gt; listener)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (listener != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <a class="code" href="class_message_broadcaster.html#a330c91a31c6e9f9acc83503fdacd3039">listeners</a>.erase(listener);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#a3905c8178f6ee1fdec4885642b291aef">   42</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_message_broadcaster.html#a3905c8178f6ee1fdec4885642b291aef">sendMessage</a>(std::string message)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; listener : <a class="code" href="class_message_broadcaster.html#a330c91a31c6e9f9acc83503fdacd3039">listeners</a>)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      listener-&gt;reactMessage(<span class="keyword">this</span>, message);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#aaf627669b4bf8abc5c3d78bf21192ffd">   51</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_message_broadcaster.html#aaf627669b4bf8abc5c3d78bf21192ffd">clearMessageListenersList</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_message_broadcaster.html#a330c91a31c6e9f9acc83503fdacd3039">listeners</a>.clear();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_message_broadcaster.html#a330c91a31c6e9f9acc83503fdacd3039">   57</a></span>&#160;  std::set&lt;std::shared_ptr&lt;MessageListener&gt;&gt; <a class="code" href="class_message_broadcaster.html#a330c91a31c6e9f9acc83503fdacd3039">listeners</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html">   64</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_notification_broadcaster.html">NotificationBroadcaster</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a19ab9abeba5b04f6abb4f633b405942b">   67</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_notification_broadcaster.html#a19ab9abeba5b04f6abb4f633b405942b">~NotificationBroadcaster</a>()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_notification_broadcaster.html#a681a31b00207d84d30bb78baed5d165d">clearNotificationListenersList</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a840987f5c7baac402cc4453ce879c48a">   74</a></span>&#160;  <a class="code" href="class_notification_broadcaster.html#a840987f5c7baac402cc4453ce879c48a">addNotificationListener</a>(std::shared_ptr&lt;NotificationListener&gt; newListener)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (newListener != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a>.insert(newListener);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#aa526055d9a5d462ab7b155b72e0e90f4">   84</a></span>&#160;  <a class="code" href="class_notification_broadcaster.html#aa526055d9a5d462ab7b155b72e0e90f4">removeNotificationListener</a>(std::shared_ptr&lt;NotificationListener&gt; listener)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (listener != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a>.erase(listener);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">   93</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">notify</a>()</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; listener : <a class="code" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a>)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      listener-&gt;reactNotification(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a681a31b00207d84d30bb78baed5d165d">  102</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_notification_broadcaster.html#a681a31b00207d84d30bb78baed5d165d">clearNotificationListenersList</a>()</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a>.clear();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">  108</a></span>&#160;  std::set&lt;std::shared_ptr&lt;NotificationListener&gt;&gt; <a class="code" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="ttc" id="class_message_broadcaster_html_ad4f708f570c1a75f43779dc39ab151f2"><div class="ttname"><a href="class_message_broadcaster.html#ad4f708f570c1a75f43779dc39ab151f2">MessageBroadcaster::removeMessageListener</a></div><div class="ttdeci">virtual void removeMessageListener(std::shared_ptr&lt; MessageListener &gt; listener)</div><div class="ttdoc">Remove a listener. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:33</div></div>
+<div class="ttc" id="class_notification_broadcaster_html_a45b3e28a89409670ce527682e91cc09d"><div class="ttname"><a href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">NotificationBroadcaster::notify</a></div><div class="ttdeci">virtual void notify()</div><div class="ttdoc">Send notification to all listeners in the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:93</div></div>
+<div class="ttc" id="class_message_broadcaster_html"><div class="ttname"><a href="class_message_broadcaster.html">MessageBroadcaster</a></div><div class="ttdef"><b>Definition:</b> broadcasters.h:13</div></div>
+<div class="ttc" id="class_message_broadcaster_html_a3905c8178f6ee1fdec4885642b291aef"><div class="ttname"><a href="class_message_broadcaster.html#a3905c8178f6ee1fdec4885642b291aef">MessageBroadcaster::sendMessage</a></div><div class="ttdeci">virtual void sendMessage(std::string message)</div><div class="ttdoc">Send instruction to all registered listeners. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:42</div></div>
+<div class="ttc" id="class_message_broadcaster_html_aaf627669b4bf8abc5c3d78bf21192ffd"><div class="ttname"><a href="class_message_broadcaster.html#aaf627669b4bf8abc5c3d78bf21192ffd">MessageBroadcaster::clearMessageListenersList</a></div><div class="ttdeci">virtual void clearMessageListenersList()</div><div class="ttdoc">Remove all listenenrs from the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:51</div></div>
+<div class="ttc" id="class_notification_broadcaster_html_aa526055d9a5d462ab7b155b72e0e90f4"><div class="ttname"><a href="class_notification_broadcaster.html#aa526055d9a5d462ab7b155b72e0e90f4">NotificationBroadcaster::removeNotificationListener</a></div><div class="ttdeci">virtual void removeNotificationListener(std::shared_ptr&lt; NotificationListener &gt; listener)</div><div class="ttdoc">Remove a listener from the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:84</div></div>
 <div class="ttc" id="listeners_8h_html"><div class="ttname"><a href="listeners_8h.html">listeners.h</a></div></div>
-<div class="ttc" id="class_notification_broadcaster_html_ad24bbbbddeea101de97231aed5a59b7f"><div class="ttname"><a href="class_notification_broadcaster.html#ad24bbbbddeea101de97231aed5a59b7f">NotificationBroadcaster::removeNotificationListener</a></div><div class="ttdeci">virtual void removeNotificationListener(NotificationListener *listener)</div><div class="ttdoc">Remove a listener from the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:79</div></div>
-<div class="ttc" id="class_notification_broadcaster_html_a681a31b00207d84d30bb78baed5d165d"><div class="ttname"><a href="class_notification_broadcaster.html#a681a31b00207d84d30bb78baed5d165d">NotificationBroadcaster::clearNotificationListenersList</a></div><div class="ttdeci">virtual void clearNotificationListenersList()</div><div class="ttdoc">Remove alll listenenrs from the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:97</div></div>
-<div class="ttc" id="class_message_broadcaster_html_adadabd03b92dc9eeff6b45f4ffcd77ce"><div class="ttname"><a href="class_message_broadcaster.html#adadabd03b92dc9eeff6b45f4ffcd77ce">MessageBroadcaster::listeners</a></div><div class="ttdeci">std::set&lt; MessageListener * &gt; listeners</div><div class="ttdef"><b>Definition:</b> broadcasters.h:54</div></div>
-<div class="ttc" id="class_notification_listener_html"><div class="ttname"><a href="class_notification_listener.html">NotificationListener</a></div><div class="ttdef"><b>Definition:</b> listeners.h:17</div></div>
-<div class="ttc" id="class_notification_broadcaster_html_a201c85499baebf9f97f050deb4a21e53"><div class="ttname"><a href="class_notification_broadcaster.html#a201c85499baebf9f97f050deb4a21e53">NotificationBroadcaster::addNotificationListener</a></div><div class="ttdeci">virtual void addNotificationListener(NotificationListener *newListener)</div><div class="ttdoc">Add a listener to the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:70</div></div>
-<div class="ttc" id="class_message_listener_html"><div class="ttname"><a href="class_message_listener.html">MessageListener</a></div><div class="ttdoc">Base class for message broadcast subscribers. </div><div class="ttdef"><b>Definition:</b> listeners.h:8</div></div>
-<div class="ttc" id="class_message_broadcaster_html_a3e3184aea9889c9ea36af5cbefbd8e66"><div class="ttname"><a href="class_message_broadcaster.html#a3e3184aea9889c9ea36af5cbefbd8e66">MessageBroadcaster::addMessageListener</a></div><div class="ttdeci">virtual void addMessageListener(MessageListener *newListener)</div><div class="ttdoc">Add a new listeners. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:21</div></div>
-<div class="ttc" id="class_notification_broadcaster_html_a55a439e781b6029ed0a0d8410efcf32e"><div class="ttname"><a href="class_notification_broadcaster.html#a55a439e781b6029ed0a0d8410efcf32e">NotificationBroadcaster::listeners</a></div><div class="ttdeci">std::set&lt; NotificationListener * &gt; listeners</div><div class="ttdef"><b>Definition:</b> broadcasters.h:103</div></div>
-<div class="ttc" id="class_notification_broadcaster_html"><div class="ttname"><a href="class_notification_broadcaster.html">NotificationBroadcaster</a></div><div class="ttdef"><b>Definition:</b> broadcasters.h:61</div></div>
-<div class="ttc" id="class_message_broadcaster_html_ae198487bd28f5ed437f9166170bc38e0"><div class="ttname"><a href="class_message_broadcaster.html#ae198487bd28f5ed437f9166170bc38e0">MessageBroadcaster::removeMessageListener</a></div><div class="ttdeci">virtual void removeMessageListener(MessageListener *listener)</div><div class="ttdoc">Remove a listener. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:30</div></div>
-<div class="ttc" id="class_notification_broadcaster_html_a19ab9abeba5b04f6abb4f633b405942b"><div class="ttname"><a href="class_notification_broadcaster.html#a19ab9abeba5b04f6abb4f633b405942b">NotificationBroadcaster::~NotificationBroadcaster</a></div><div class="ttdeci">virtual ~NotificationBroadcaster()</div><div class="ttdef"><b>Definition:</b> broadcasters.h:64</div></div>
-<div class="ttc" id="class_message_broadcaster_html_a233b4bf529f9ba2b4c58a35134b3f64c"><div class="ttname"><a href="class_message_broadcaster.html#a233b4bf529f9ba2b4c58a35134b3f64c">MessageBroadcaster::~MessageBroadcaster</a></div><div class="ttdeci">virtual ~MessageBroadcaster()</div><div class="ttdef"><b>Definition:</b> broadcasters.h:15</div></div>
+<div class="ttc" id="class_notification_broadcaster_html_a681a31b00207d84d30bb78baed5d165d"><div class="ttname"><a href="class_notification_broadcaster.html#a681a31b00207d84d30bb78baed5d165d">NotificationBroadcaster::clearNotificationListenersList</a></div><div class="ttdeci">virtual void clearNotificationListenersList()</div><div class="ttdoc">Remove alll listenenrs from the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:102</div></div>
+<div class="ttc" id="class_message_broadcaster_html_afcb58085c6949df36993ae466434d082"><div class="ttname"><a href="class_message_broadcaster.html#afcb58085c6949df36993ae466434d082">MessageBroadcaster::addMessageListener</a></div><div class="ttdeci">virtual void addMessageListener(std::shared_ptr&lt; MessageListener &gt; newListener)</div><div class="ttdoc">Add a new listeners. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:23</div></div>
+<div class="ttc" id="class_notification_broadcaster_html_a840987f5c7baac402cc4453ce879c48a"><div class="ttname"><a href="class_notification_broadcaster.html#a840987f5c7baac402cc4453ce879c48a">NotificationBroadcaster::addNotificationListener</a></div><div class="ttdeci">virtual void addNotificationListener(std::shared_ptr&lt; NotificationListener &gt; newListener)</div><div class="ttdoc">Add a listener to the list. </div><div class="ttdef"><b>Definition:</b> broadcasters.h:74</div></div>
+<div class="ttc" id="class_notification_broadcaster_html"><div class="ttname"><a href="class_notification_broadcaster.html">NotificationBroadcaster</a></div><div class="ttdef"><b>Definition:</b> broadcasters.h:64</div></div>
+<div class="ttc" id="class_notification_broadcaster_html_a98d16aaa12f53fcc747b65f447d1fb01"><div class="ttname"><a href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">NotificationBroadcaster::listeners</a></div><div class="ttdeci">std::set&lt; std::shared_ptr&lt; NotificationListener &gt; &gt; listeners</div><div class="ttdef"><b>Definition:</b> broadcasters.h:108</div></div>
+<div class="ttc" id="class_notification_broadcaster_html_a19ab9abeba5b04f6abb4f633b405942b"><div class="ttname"><a href="class_notification_broadcaster.html#a19ab9abeba5b04f6abb4f633b405942b">NotificationBroadcaster::~NotificationBroadcaster</a></div><div class="ttdeci">virtual ~NotificationBroadcaster()</div><div class="ttdef"><b>Definition:</b> broadcasters.h:67</div></div>
+<div class="ttc" id="class_message_broadcaster_html_a233b4bf529f9ba2b4c58a35134b3f64c"><div class="ttname"><a href="class_message_broadcaster.html#a233b4bf529f9ba2b4c58a35134b3f64c">MessageBroadcaster::~MessageBroadcaster</a></div><div class="ttdeci">virtual ~MessageBroadcaster()</div><div class="ttdef"><b>Definition:</b> broadcasters.h:16</div></div>
+<div class="ttc" id="class_message_broadcaster_html_a330c91a31c6e9f9acc83503fdacd3039"><div class="ttname"><a href="class_message_broadcaster.html#a330c91a31c6e9f9acc83503fdacd3039">MessageBroadcaster::listeners</a></div><div class="ttdeci">std::set&lt; std::shared_ptr&lt; MessageListener &gt; &gt; listeners</div><div class="ttdef"><b>Definition:</b> broadcasters.h:57</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
