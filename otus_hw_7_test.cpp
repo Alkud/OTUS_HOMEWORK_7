@@ -212,7 +212,7 @@ BOOST_AUTO_TEST_CASE(empty_command_test)
 //      getProcessorOutput(testString, '{', '}', 3, DebugOutput::debug_off,
 //                         additionalString)
 //    };
-//    BOOST_CHECK(processorOutput[0] == "bulk: cmd1, , cmd2");
+//    BOOST_CHECK(?????);
 //  }
 //  catch (const std::exception& ex)
 //  {
@@ -386,6 +386,35 @@ BOOST_AUTO_TEST_CASE(incorrect_closing_test)
     std::cerr<< ex.what();
   }
 }
+
+
+BOOST_AUTO_TEST_CASE(commands_containing_delimiter_test)
+{
+  try
+  {
+    const std::string testString
+    {
+      "cmd1\n"
+      "{cmd2\n"
+      "cmd3\n"
+      "cmd4}\n"
+      "cmd5"
+    };
+    auto processorOutput{
+      getProcessorOutput(testString, '{', '}', 2, DebugOutput::debug_on)
+    };
+
+    BOOST_CHECK(processorOutput.size() == 3);
+    BOOST_CHECK(processorOutput[0] == "bulk: cmd1, {cmd2");
+    BOOST_CHECK(processorOutput[1] == "bulk: cmd3, cmd4}");
+    BOOST_CHECK(processorOutput[2] == "bulk: cmd5");
+  }
+  catch (const std::exception& ex)
+  {
+    std::cerr << ex.what();
+  }
+}
+
 
 BOOST_AUTO_TEST_CASE(logging_test)
 {
