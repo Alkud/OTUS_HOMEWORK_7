@@ -21,6 +21,11 @@ void InputReader::read()
   {
     while(std::getline(input, nextString))
     {
+      if (nextString.size() > (size_t)InputReaderSettings::MaxInputStringSize)
+      {
+        std::cerr << "Maximum command length exceeded! String truncated";
+        nextString = nextString.substr((size_t)InputReaderSettings::MaxInputStringSize);
+      }
       buffer->putItem(std::move(nextString));
     }
   }

@@ -38,7 +38,8 @@ void homework(int argc, char* argv[], std::istream& inputStream, std::ostream& o
       }
     }
   }
-  size_t bulkSize{commandLineParam};
+
+  const size_t bulkSize{commandLineParam};
 
   const CommandProcessor processor{inputStream, outputStream, bulkSize, '{', '}'};
 

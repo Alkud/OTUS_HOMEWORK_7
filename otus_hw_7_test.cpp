@@ -118,6 +118,7 @@ BOOST_AUTO_TEST_CASE(no_command_line_parameter)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -141,6 +142,7 @@ BOOST_AUTO_TEST_CASE(bad_command_line_parameter)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -163,6 +165,7 @@ BOOST_AUTO_TEST_CASE(wrong_command_line_parameter)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -178,6 +181,7 @@ BOOST_AUTO_TEST_CASE(empty_input_test)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -196,29 +200,27 @@ BOOST_AUTO_TEST_CASE(empty_command_test)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
 
-//BOOST_AUTO_TEST_CASE(exceeding_max_string_size)
-//{
-//  const std::string tmpString{};
-//  const size_t maxStringSize{UINT64_MAX - 1};
-//  const std::string testString(maxStringSize, 'E');
-//  const std::string additionalString{"e"};
-//  try
-//  {
-//    auto processorOutput{
-//      getProcessorOutput(testString, '{', '}', 3, DebugOutput::debug_off,
-//                         additionalString)
-//    };
-//    BOOST_CHECK(?????);
-//  }
-//  catch (const std::exception& ex)
-//  {
-//    std::cerr << ex.what();
-//  }
-//}
+BOOST_AUTO_TEST_CASE(exceeding_max_string_size)
+{
+  const std::string expectedOutput((size_t)InputReaderSettings::MaxInputStringSize, 'E');
+  const std::string testString(2 * (size_t)InputReaderSettings::MaxInputStringSize, 'E');
+  try
+  {
+    auto processorOutput{
+      getProcessorOutput(testString, '{', '}', 3, DebugOutput::debug_off)
+    };
+    BOOST_CHECK(processorOutput[0] == std::string {"bulk: "} + expectedOutput);
+  }
+  catch (const std::exception& ex)
+  {
+    std::cerr << ex.what();
+  }
+}
 
 BOOST_AUTO_TEST_CASE(bulk_segmentation_test1)
 {
@@ -238,6 +240,7 @@ BOOST_AUTO_TEST_CASE(bulk_segmentation_test1)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -266,6 +269,7 @@ BOOST_AUTO_TEST_CASE(bulk_segmentation_test2)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -309,6 +313,7 @@ BOOST_AUTO_TEST_CASE(nested_bulks_test)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -347,6 +352,7 @@ BOOST_AUTO_TEST_CASE(unexpected_bulk_end_test)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -383,6 +389,7 @@ BOOST_AUTO_TEST_CASE(incorrect_closing_test)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr<< ex.what();
   }
 }
@@ -401,7 +408,7 @@ BOOST_AUTO_TEST_CASE(commands_containing_delimiter_test)
       "cmd5"
     };
     auto processorOutput{
-      getProcessorOutput(testString, '{', '}', 2, DebugOutput::debug_on)
+      getProcessorOutput(testString, '{', '}', 2, DebugOutput::debug_off)
     };
 
     BOOST_CHECK(processorOutput.size() == 3);
@@ -411,6 +418,7 @@ BOOST_AUTO_TEST_CASE(commands_containing_delimiter_test)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }
@@ -465,6 +473,7 @@ BOOST_AUTO_TEST_CASE(logging_test)
   }
   catch (const std::exception& ex)
   {
+    BOOST_CHECK(false);
     std::cerr << ex.what();
   }
 }

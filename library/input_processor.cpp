@@ -2,7 +2,7 @@
 
 #include "input_processor.h"
 
-InputProcessor::InputProcessor(size_t newBulkSize, char newBulkOpenDelimiter, char newBulkCloseDelimiter,
+InputProcessor::InputProcessor(const size_t& newBulkSize, const char& newBulkOpenDelimiter, const char& newBulkCloseDelimiter,
                                std::shared_ptr<SmartBuffer<std::string> > newInputBuffer,
                                std::shared_ptr<SmartBuffer<std::pair<size_t, std::string> > > newOutputBuffer) :
   bulkSize{newBulkSize > 1 ? newBulkSize : 1},
