@@ -18,9 +18,9 @@ public:
   (
     std::istream& inputStream,
     std::ostream& outputStream,
-    size_t bulkSize,
-    char bulkOpenDelimiter,
-    char bulkCloseDelimiter
+    const size_t& bulkSize,
+    const char& bulkOpenDelimiter,
+    const char& bulkCloseDelimiter
    );
 
   /// Runs input reader

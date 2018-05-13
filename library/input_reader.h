@@ -7,6 +7,11 @@
 #include <iostream>
 #include <memory>
 
+enum class InputReaderSettings
+{
+  MaxInputStringSize = 80
+};
+
 class InputReader : public MessageBroadcaster
 {
 public:

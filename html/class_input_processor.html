@@ -111,8 +111,8 @@ Collaboration diagram for InputProcessor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8cbde1295ba292f53c7d72b458d13d98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#a8cbde1295ba292f53c7d72b458d13d98">InputProcessor</a> (size_t newBulkSize, char newBulkOpenDelimiter, char newBulkCloseDelimiter, std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::string &gt;&gt; newInputBuffer, std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt;&gt; newOutputBuffer)</td></tr>
-<tr class="separator:a8cbde1295ba292f53c7d72b458d13d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3dee22d4e4fc859d9a2de4cdbb5c82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#aac3dee22d4e4fc859d9a2de4cdbb5c82">InputProcessor</a> (const size_t &amp;newBulkSize, const char &amp;newBulkOpenDelimiter, const char &amp;newBulkCloseDelimiter, std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::string &gt;&gt; newInputBuffer, std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; std::pair&lt; size_t, std::string &gt;&gt;&gt; newOutputBuffer)</td></tr>
+<tr class="separator:aac3dee22d4e4fc859d9a2de4cdbb5c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5336fbaf63c7f9ba821f188003e537ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#a5336fbaf63c7f9ba821f188003e537ac">reactNotification</a> (<a class="el" href="class_notification_broadcaster.html">NotificationBroadcaster</a> *sender) override</td></tr>
 <tr class="memdesc:a5336fbaf63c7f9ba821f188003e537ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes object's reaction to a notification.  <a href="#a5336fbaf63c7f9ba821f188003e537ac">More...</a><br/></td></tr>
 <tr class="separator:a5336fbaf63c7f9ba821f188003e537ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,12 +139,12 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ae71e0567c25e1c22dcb89a3bb567cd43"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#ae71e0567c25e1c22dcb89a3bb567cd43">bulkSize</a></td></tr>
-<tr class="separator:ae71e0567c25e1c22dcb89a3bb567cd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0abf41571bdb810c1c1b3832235f95e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#aa0abf41571bdb810c1c1b3832235f95e">bulkOpenDelimiter</a></td></tr>
-<tr class="separator:aa0abf41571bdb810c1c1b3832235f95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ae0c01979a2f34b28a94ce607bec2c4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#a8ae0c01979a2f34b28a94ce607bec2c4">bulkCloseDelimiter</a></td></tr>
-<tr class="separator:a8ae0c01979a2f34b28a94ce607bec2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe56e735aaea765a7215b80f23b134cc"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#afe56e735aaea765a7215b80f23b134cc">bulkSize</a></td></tr>
+<tr class="separator:afe56e735aaea765a7215b80f23b134cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a701febfbf59e874d93a6275eb3a98e85"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#a701febfbf59e874d93a6275eb3a98e85">bulkOpenDelimiter</a></td></tr>
+<tr class="separator:a701febfbf59e874d93a6275eb3a98e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07eccaffd21ea1f5862315d78bfd252f"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#a07eccaffd21ea1f5862315d78bfd252f">bulkCloseDelimiter</a></td></tr>
+<tr class="separator:a07eccaffd21ea1f5862315d78bfd252f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeac10976ca5f948f55cdb87dbc50c43"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a><br class="typebreak"/>
 &lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_processor.html#afeac10976ca5f948f55cdb87dbc50c43">inputBuffer</a></td></tr>
 <tr class="separator:afeac10976ca5f948f55cdb87dbc50c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,26 +163,26 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 <tr class="separator:afb6dd69b22a1a5baa70de306594cd222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8cbde1295ba292f53c7d72b458d13d98"></a>
+<a class="anchor" id="aac3dee22d4e4fc859d9a2de4cdbb5c82"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">InputProcessor::InputProcessor </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
           <td class="paramname"><em>newBulkSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">const char &amp;&#160;</td>
           <td class="paramname"><em>newBulkOpenDelimiter</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">const char &amp;&#160;</td>
           <td class="paramname"><em>newBulkCloseDelimiter</em>, </td>
         </tr>
         <tr>
@@ -368,7 +368,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a8ae0c01979a2f34b28a94ce607bec2c4"></a>
+<a class="anchor" id="a07eccaffd21ea1f5862315d78bfd252f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -376,7 +376,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string InputProcessor::bulkCloseDelimiter</td>
+          <td class="memname">const std::string InputProcessor::bulkCloseDelimiter</td>
         </tr>
       </table>
   </td>
@@ -388,7 +388,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 
 </div>
 </div>
-<a class="anchor" id="aa0abf41571bdb810c1c1b3832235f95e"></a>
+<a class="anchor" id="a701febfbf59e874d93a6275eb3a98e85"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -396,7 +396,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string InputProcessor::bulkOpenDelimiter</td>
+          <td class="memname">const std::string InputProcessor::bulkOpenDelimiter</td>
         </tr>
       </table>
   </td>
@@ -408,7 +408,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 
 </div>
 </div>
-<a class="anchor" id="ae71e0567c25e1c22dcb89a3bb567cd43"></a>
+<a class="anchor" id="afe56e735aaea765a7215b80f23b134cc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -416,7 +416,7 @@ std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t InputProcessor::bulkSize</td>
+          <td class="memname">const size_t InputProcessor::bulkSize</td>
         </tr>
       </table>
   </td>

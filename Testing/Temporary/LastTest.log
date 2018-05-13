@@ -1,24 +1,21 @@
-Start testing: May 09 12:24 UTC
+Start testing: May 13 18:28 UTC
 ----------------------------------------------------------
 1/1 Testing: test_hw_7
 1/1 Test: test_hw_7
 Command: "/home/travis/build/Alkud/OTUS_HOMEWORK_7/otus_hw_7_test"
 Directory: /home/travis/build/Alkud/OTUS_HOMEWORK_7
-"test_hw_7" start time: May 09 12:24 UTC
+"test_hw_7" start time: May 13 18:28 UTC
 Output:
 ----------------------------------------------------------
-Running 15 test cases...
-bulk: cmd1, {cmd2
-bulk: cmd3, cmd4}
-bulk: cmd5
-
+Running 16 test cases...
+Maximum command length exceeded! String truncated
 *** No errors detected
 <end of output>
-Test time =   1.00 sec
+Test time =   1.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test_hw_7" end time: May 09 12:24 UTC
+"test_hw_7" end time: May 13 18:28 UTC
 "test_hw_7" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-End testing: May 09 12:24 UTC
+End testing: May 13 18:28 UTC

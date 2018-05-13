@@ -14,9 +14,9 @@ class InputProcessor : public NotificationListener,
 {
 public:
 
-  InputProcessor(size_t newBulkSize,
-                 char newBulkOpenDelimiter,
-                 char newBulkCloseDelimiter,
+  InputProcessor(const size_t& newBulkSize,
+                 const char& newBulkOpenDelimiter,
+                 const char& newBulkCloseDelimiter,
                  std::shared_ptr<SmartBuffer<std::string>> newInputBuffer,
                  std::shared_ptr<SmartBuffer<std::pair<size_t, std::string>>> newOutputBuffer);
 
@@ -32,9 +32,9 @@ private:
   void closeCurrentBulk();
   void addCommandToBulk(std::string&& newCommand);
 
-  size_t bulkSize;
-  std::string bulkOpenDelimiter;
-  std::string bulkCloseDelimiter;
+  const size_t bulkSize;
+  const std::string bulkOpenDelimiter;
+  const std::string bulkCloseDelimiter;
   std::shared_ptr<SmartBuffer<std::string>> inputBuffer;
   std::shared_ptr<SmartBuffer<std::pair<size_t, std::string>>> outputBuffer;
 
