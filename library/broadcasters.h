@@ -1,4 +1,4 @@
-// broadcasters.h in Otus homework#7 project
+// broadcasters.h in Otus homework#10 project
 
 #pragma once
 
@@ -6,13 +6,13 @@
 #include <string>
 #include <memory>
 #include "listeners.h"
-
+#include "weak_ptr_less.h"
 
 /// Base class for a brodcaster, sending messages,
 /// containing instructions for listeners
 class MessageBroadcaster
 {
-public:  
+public:
   virtual ~MessageBroadcaster()
   {
     clearMessageListenersList();
@@ -20,41 +20,44 @@ public:
 
   /// Add a new listeners
   virtual void
-  addMessageListener(std::shared_ptr<MessageListener> newListener)
+  addMessageListener(const std::shared_ptr<MessageListener>& newListener)
   {
     if (newListener != nullptr)
     {
-      listeners.insert(newListener);
+      messageListeners.insert(std::weak_ptr<MessageListener>{newListener});
     }
   }
 
   /// Remove a listener
   virtual void
-  removeMessageListener(std::shared_ptr<MessageListener> listener)
+  removeMessageListener(const std::shared_ptr<MessageListener>& listener)
   {
     if (listener != nullptr)
     {
-      listeners.erase(listener);
+      messageListeners.erase(std::weak_ptr<MessageListener>{listener});
     }
   }
 
   /// Send instruction to all registered listeners
   virtual void sendMessage(std::string message)
   {
-    for (const auto& listener : listeners)
+    for (const auto& listener : messageListeners)
     {
-      listener->reactMessage(this, message);
+      if (listener.expired() != true)
+      {
+        listener.lock()->reactMessage(this, message);
+      }
     }
   }
 
   /// Remove all listenenrs from the list
   virtual void clearMessageListenersList()
   {
-    listeners.clear();
+    messageListeners.clear();
   }
 
 protected:
-  std::set<std::shared_ptr<MessageListener>> listeners;
+  std::set<std::weak_ptr<MessageListener>, WeakPtrLess<MessageListener>> messageListeners;
 };
 
 
@@ -71,39 +74,42 @@ public:
 
   /// Add a listener to the list
   virtual void
-  addNotificationListener(std::shared_ptr<NotificationListener> newListener)
+  addNotificationListener(const std::shared_ptr<NotificationListener>& newListener)
   {
     if (newListener != nullptr)
     {
-      listeners.insert(newListener);
+      notificationListeners.insert(std::weak_ptr<NotificationListener>{newListener});
     }
   }
 
   /// Remove a listener from the list
   virtual void
-  removeNotificationListener(std::shared_ptr<NotificationListener> listener)
+  removeNotificationListener(const std::shared_ptr<NotificationListener>& listener)
   {
     if (listener != nullptr)
     {
-      listeners.erase(listener);
+      notificationListeners.erase(std::weak_ptr<NotificationListener>{listener});
     }
   }
 
   /// Send notification to all listeners in the list
   virtual void notify()
   {
-    for (const auto& listener : listeners)
+    for (const auto& listener : notificationListeners)
     {
-      listener->reactNotification(this);
+      if (listener.expired() != true)
+      {
+        listener.lock()->reactNotification(this);
+      }
     }
   }
 
   /// Remove alll listenenrs from the list
   virtual void clearNotificationListenersList()
   {
-    listeners.clear();
+    notificationListeners.clear();
   }
 
 protected:
-  std::set<std::shared_ptr<NotificationListener>> listeners;
+  std::set<std::weak_ptr<NotificationListener>, WeakPtrLess<NotificationListener>> notificationListeners;
 };
