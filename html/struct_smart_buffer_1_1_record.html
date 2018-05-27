@@ -107,9 +107,11 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a42a026c794acfb53e0fbb63370ad7258"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_smart_buffer_1_1_record.html#a42a026c794acfb53e0fbb63370ad7258">value</a></td></tr>
 <tr class="separator:a42a026c794acfb53e0fbb63370ad7258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef6e0760ac5b92c5620e2e4882ca3026"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_smart_buffer_1_1_record.html#aef6e0760ac5b92c5620e2e4882ca3026">recipients</a></td></tr>
-<tr class="separator:aef6e0760ac5b92c5620e2e4882ca3026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139310ab0ca29dc26527ae875b3da4eb"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::weak_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt;<br class="typebreak"/>
+, <a class="el" href="struct_weak_ptr_less.html">WeakPtrLess</a><br class="typebreak"/>
+&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_smart_buffer_1_1_record.html#a139310ab0ca29dc26527ae875b3da4eb">recipients</a></td></tr>
+<tr class="separator:a139310ab0ca29dc26527ae875b3da4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
@@ -144,14 +146,14 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aef6e0760ac5b92c5620e2e4882ca3026"></a>
+<a class="anchor" id="a139310ab0ca29dc26527ae875b3da4eb"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::set&lt;std::shared_ptr&lt;<a class="el" href="class_notification_listener.html">NotificationListener</a>&gt; &gt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; T &gt;::Record::recipients</td>
+          <td class="memname">std::set&lt;std::weak_ptr&lt;<a class="el" href="class_notification_listener.html">NotificationListener</a>&gt;, <a class="el" href="struct_weak_ptr_less.html">WeakPtrLess</a>&lt;<a class="el" href="class_notification_listener.html">NotificationListener</a>&gt; &gt; <a class="el" href="class_smart_buffer.html">SmartBuffer</a>&lt; T &gt;::Record::recipients</td>
         </tr>
       </table>
 </div><div class="memdoc">

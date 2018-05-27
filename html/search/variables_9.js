@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['recipients',['recipients',['../struct_smart_buffer_1_1_record.html#aef6e0760ac5b92c5620e2e4882ca3026',1,'SmartBuffer::Record']]]
+  ['publisher',['publisher',['../class_command_processor.html#ae15983130cc1b6a3fd20d6187db4ad53',1,'CommandProcessor']]]
 ];

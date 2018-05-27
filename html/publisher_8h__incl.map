@@ -1,5 +1,6 @@
 <map id="library/publisher.h" name="library/publisher.h">
 <area shape="rect" id="node2" href="$listeners_8h.html" title="listeners.h" alt="" coords="5,229,87,256"/>
-<area shape="rect" id="node4" href="$smart__buffer_8h.html" title="smart_buffer.h" alt="" coords="276,80,383,107"/>
-<area shape="rect" id="node5" href="$broadcasters_8h.html" title="broadcasters.h" alt="" coords="78,155,185,181"/>
+<area shape="rect" id="node4" href="$smart__buffer_8h.html" title="smart_buffer.h" alt="" coords="283,80,389,107"/>
+<area shape="rect" id="node5" href="$broadcasters_8h.html" title="broadcasters.h" alt="" coords="85,155,192,181"/>
+<area shape="rect" id="node8" href="$weak__ptr__less_8h.html" title="weak_ptr_less.h" alt="" coords="227,229,343,256"/>
 </map>

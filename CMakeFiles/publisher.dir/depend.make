@@ -6,4 +6,5 @@ CMakeFiles/publisher.dir/library/publisher.cpp.o: library/listeners.h
 CMakeFiles/publisher.dir/library/publisher.cpp.o: library/publisher.cpp
 CMakeFiles/publisher.dir/library/publisher.cpp.o: library/publisher.h
 CMakeFiles/publisher.dir/library/publisher.cpp.o: library/smart_buffer.h
+CMakeFiles/publisher.dir/library/publisher.cpp.o: library/weak_ptr_less.h
 

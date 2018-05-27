@@ -35,6 +35,8 @@ memory
 -
 listeners.h
 library/listeners.h
+weak_ptr_less.h
+library/weak_ptr_less.h
 
 library/command_processor.h
 memory
@@ -109,4 +111,6 @@ algorithm
 -
 stdexcept
 -
+
+library/weak_ptr_less.h
 

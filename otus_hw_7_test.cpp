@@ -1,6 +1,6 @@
 // otus_hw_7_test.cpp in Otus homework#7 project
 
-#define BOOST_TEST_MODULE OTUS_HW_7_TEST
+#define BOOST_TEST_MODULE otus_hw_7_test
 
 #include <boost/test/unit_test.hpp>
 #include "homework_7.h"
@@ -118,7 +118,7 @@ BOOST_AUTO_TEST_CASE(no_command_line_parameter)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -142,7 +142,7 @@ BOOST_AUTO_TEST_CASE(bad_command_line_parameter)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -165,7 +165,7 @@ BOOST_AUTO_TEST_CASE(wrong_command_line_parameter)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -181,7 +181,7 @@ BOOST_AUTO_TEST_CASE(empty_input_test)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -200,7 +200,7 @@ BOOST_AUTO_TEST_CASE(empty_command_test)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -218,6 +218,7 @@ BOOST_AUTO_TEST_CASE(exceeding_max_string_size)
   }
   catch (const std::exception& ex)
   {
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -240,7 +241,7 @@ BOOST_AUTO_TEST_CASE(bulk_segmentation_test1)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -269,7 +270,7 @@ BOOST_AUTO_TEST_CASE(bulk_segmentation_test2)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -313,7 +314,7 @@ BOOST_AUTO_TEST_CASE(nested_bulks_test)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -352,7 +353,7 @@ BOOST_AUTO_TEST_CASE(unexpected_bulk_end_test)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -389,7 +390,7 @@ BOOST_AUTO_TEST_CASE(incorrect_closing_test)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr<< ex.what();
   }
 }
@@ -418,7 +419,7 @@ BOOST_AUTO_TEST_CASE(commands_containing_delimiter_test)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }
@@ -473,7 +474,7 @@ BOOST_AUTO_TEST_CASE(logging_test)
   }
   catch (const std::exception& ex)
   {
-    BOOST_CHECK(false);
+    BOOST_FAIL("Exception cought");
     std::cerr << ex.what();
   }
 }

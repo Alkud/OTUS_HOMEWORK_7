@@ -15,6 +15,8 @@ memory
 -
 listeners.h
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/library/listeners.h
+weak_ptr_less.h
+/home/travis/build/Alkud/OTUS_HOMEWORK_7/library/weak_ptr_less.h
 
 /home/travis/build/Alkud/OTUS_HOMEWORK_7/library/input_reader.cpp
 input_reader.h
@@ -47,4 +49,6 @@ algorithm
 -
 stdexcept
 -
+
+/home/travis/build/Alkud/OTUS_HOMEWORK_7/library/weak_ptr_less.h
 

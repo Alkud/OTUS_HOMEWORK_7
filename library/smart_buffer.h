@@ -24,7 +24,7 @@ public:
       value{newValue} {}
 
     T value;
-    std::set<std::shared_ptr<NotificationListener>> recipients;
+    std::set<std::weak_ptr<NotificationListener>, WeakPtrLess<NotificationListener>> recipients;
   };
 
   /// Add new element to the buffer
@@ -55,7 +55,7 @@ public:
     if (nullptr == recipient)
     {
       auto result {data.front().value};
-      if (listeners.empty() == true)
+      if (notificationListeners.empty() == true)
       {
         data.pop_front();
       }
@@ -69,7 +69,7 @@ public:
       ++iter;
     }
     auto result {iter->value};
-    if (iter->recipients == listeners)
+    if (iter->recipients == notificationListeners)
     {
       data.erase(iter);
     }

@@ -12,3 +12,4 @@ CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o
  library/logger.h
  library/publisher.h
  library/smart_buffer.h
+ library/weak_ptr_less.h

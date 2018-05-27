@@ -6,4 +6,5 @@ CMakeFiles/logger.dir/library/logger.cpp.o: library/listeners.h
 CMakeFiles/logger.dir/library/logger.cpp.o: library/logger.cpp
 CMakeFiles/logger.dir/library/logger.cpp.o: library/logger.h
 CMakeFiles/logger.dir/library/logger.cpp.o: library/smart_buffer.h
+CMakeFiles/logger.dir/library/logger.cpp.o: library/weak_ptr_less.h
 

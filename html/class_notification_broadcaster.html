@@ -105,12 +105,12 @@ Inheritance diagram for NotificationBroadcaster:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a19ab9abeba5b04f6abb4f633b405942b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a19ab9abeba5b04f6abb4f633b405942b">~NotificationBroadcaster</a> ()</td></tr>
 <tr class="separator:a19ab9abeba5b04f6abb4f633b405942b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840987f5c7baac402cc4453ce879c48a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a840987f5c7baac402cc4453ce879c48a">addNotificationListener</a> (std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; newListener)</td></tr>
-<tr class="memdesc:a840987f5c7baac402cc4453ce879c48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a listener to the list.  <a href="#a840987f5c7baac402cc4453ce879c48a">More...</a><br/></td></tr>
-<tr class="separator:a840987f5c7baac402cc4453ce879c48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa526055d9a5d462ab7b155b72e0e90f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#aa526055d9a5d462ab7b155b72e0e90f4">removeNotificationListener</a> (std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; listener)</td></tr>
-<tr class="memdesc:aa526055d9a5d462ab7b155b72e0e90f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a listener from the list.  <a href="#aa526055d9a5d462ab7b155b72e0e90f4">More...</a><br/></td></tr>
-<tr class="separator:aa526055d9a5d462ab7b155b72e0e90f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15586a6f9626b10881af4502efe0e73c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a15586a6f9626b10881af4502efe0e73c">addNotificationListener</a> (const std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &amp;newListener)</td></tr>
+<tr class="memdesc:a15586a6f9626b10881af4502efe0e73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a listener to the list.  <a href="#a15586a6f9626b10881af4502efe0e73c">More...</a><br/></td></tr>
+<tr class="separator:a15586a6f9626b10881af4502efe0e73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a8a6d51545f1336e5739eed279b14f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a5a8a6d51545f1336e5739eed279b14f3">removeNotificationListener</a> (const std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &amp;listener)</td></tr>
+<tr class="memdesc:a5a8a6d51545f1336e5739eed279b14f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a listener from the list.  <a href="#a5a8a6d51545f1336e5739eed279b14f3">More...</a><br/></td></tr>
+<tr class="separator:a5a8a6d51545f1336e5739eed279b14f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45b3e28a89409670ce527682e91cc09d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a45b3e28a89409670ce527682e91cc09d">notify</a> ()</td></tr>
 <tr class="memdesc:a45b3e28a89409670ce527682e91cc09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send notification to all listeners in the list.  <a href="#a45b3e28a89409670ce527682e91cc09d">More...</a><br/></td></tr>
 <tr class="separator:a45b3e28a89409670ce527682e91cc09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,9 +120,11 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a98d16aaa12f53fcc747b65f447d1fb01"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a98d16aaa12f53fcc747b65f447d1fb01">listeners</a></td></tr>
-<tr class="separator:a98d16aaa12f53fcc747b65f447d1fb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3dfdeed17b0f5f611d249218e2cf63"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::weak_ptr<br class="typebreak"/>
+&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt;<br class="typebreak"/>
+, <a class="el" href="struct_weak_ptr_less.html">WeakPtrLess</a><br class="typebreak"/>
+&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notification_broadcaster.html#a9d3dfdeed17b0f5f611d249218e2cf63">notificationListeners</a></td></tr>
+<tr class="separator:a9d3dfdeed17b0f5f611d249218e2cf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for a brodcaster, acting as a trigger, forcing listeners to take an action </p>
@@ -151,7 +153,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a840987f5c7baac402cc4453ce879c48a"></a>
+<a class="anchor" id="a15586a6f9626b10881af4502efe0e73c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -161,7 +163,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void NotificationBroadcaster::addNotificationListener </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>newListener</em></td><td>)</td>
           <td></td>
         </tr>
@@ -227,7 +229,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa526055d9a5d462ab7b155b72e0e90f4"></a>
+<a class="anchor" id="a5a8a6d51545f1336e5739eed279b14f3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -237,7 +239,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void NotificationBroadcaster::removeNotificationListener </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="class_notification_listener.html">NotificationListener</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>listener</em></td><td>)</td>
           <td></td>
         </tr>
@@ -254,7 +256,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a98d16aaa12f53fcc747b65f447d1fb01"></a>
+<a class="anchor" id="a9d3dfdeed17b0f5f611d249218e2cf63"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -262,7 +264,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::set&lt;std::shared_ptr&lt;<a class="el" href="class_notification_listener.html">NotificationListener</a>&gt; &gt; NotificationBroadcaster::listeners</td>
+          <td class="memname">std::set&lt;std::weak_ptr&lt;<a class="el" href="class_notification_listener.html">NotificationListener</a>&gt;, <a class="el" href="struct_weak_ptr_less.html">WeakPtrLess</a>&lt;<a class="el" href="class_notification_listener.html">NotificationListener</a>&gt; &gt; NotificationBroadcaster::notificationListeners</td>
         </tr>
       </table>
   </td>

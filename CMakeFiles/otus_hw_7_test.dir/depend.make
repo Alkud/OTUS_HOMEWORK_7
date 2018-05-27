@@ -11,4 +11,5 @@ CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/listeners.h
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/logger.h
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/publisher.h
 CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/smart_buffer.h
+CMakeFiles/otus_hw_7_test.dir/otus_hw_7_test.cpp.o: library/weak_ptr_less.h
 

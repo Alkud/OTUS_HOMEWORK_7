@@ -10,4 +10,5 @@ CMakeFiles/command_processor.dir/library/command_processor.cpp.o: library/listen
 CMakeFiles/command_processor.dir/library/command_processor.cpp.o: library/logger.h
 CMakeFiles/command_processor.dir/library/command_processor.cpp.o: library/publisher.h
 CMakeFiles/command_processor.dir/library/command_processor.cpp.o: library/smart_buffer.h
+CMakeFiles/command_processor.dir/library/command_processor.cpp.o: library/weak_ptr_less.h
 

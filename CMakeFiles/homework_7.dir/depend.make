@@ -11,4 +11,5 @@ CMakeFiles/homework_7.dir/library/homework_7.cpp.o: library/listeners.h
 CMakeFiles/homework_7.dir/library/homework_7.cpp.o: library/logger.h
 CMakeFiles/homework_7.dir/library/homework_7.cpp.o: library/publisher.h
 CMakeFiles/homework_7.dir/library/homework_7.cpp.o: library/smart_buffer.h
+CMakeFiles/homework_7.dir/library/homework_7.cpp.o: library/weak_ptr_less.h
 
